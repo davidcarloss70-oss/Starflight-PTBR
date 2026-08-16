@@ -1,0 +1,10 @@
+# ROMs - nunca commitar a ROM de verdade (apenas o placeholder vazio)
+starflight_translated.bin
+starflight_translated_*.bin
+
+# Artefatos de build do PyInstaller, caso o .exe seja gerado de novo aqui
+build/
+dist/
+*.spec
+__pycache__/
+*.pyc

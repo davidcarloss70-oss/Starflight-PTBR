@@ -1,0 +1,192 @@
+===============================================================================
+ STARFLIGHT (MEGA DRIVE / GENESIS) - TRADUCAO PT-BR
+ Como funciona, o que foi feito e limitacoes conhecidas
+===============================================================================
+
+Este arquivo explica, em linguagem simples, como as ferramentas deste projeto
+funcionam, o que foi feito tecnicamente para traduzir o jogo, e quais sao as
+limitacoes / pontos que ainda podem precisar de ajuste manual.
+
+
+-------------------------------------------------------------------------------
+1. VISAO GERAL DO PROCESSO
+-------------------------------------------------------------------------------
+
+A ROM original do Starflight (1MB) guarda os textos do jogo como sequencias
+de caracteres ASCII espalhadas pelo arquivo, e outras partes do codigo do
+jogo guardam ENDERECOS (ponteiros) que apontam para onde cada texto comeca.
+
+O processo de traducao, resumido:
+
+  1. EXTRACT  -> encontrar todos os textos e os ponteiros que apontam pra eles.
+  2. TRADUZIR -> substituir o texto em ingles pelo texto em portugues.
+  3. COMPILAR -> gravar os textos traduzidos numa area nova da ROM (a ROM e
+                 expandida de 1MB para 2MB) e atualizar todos os ponteiros
+                 pra apontarem pro texto novo, ja que o texto traduzido quase
+                 sempre tem tamanho diferente do original.
+
+Cada uma dessas etapas tem um script Python dedicado (explicado abaixo), e
+existe tambem um programa com interface grafica (StarflightTradutor.exe) que
+faz a parte de edicao e compilacao sem precisar mexer em codigo.
+
+
+-------------------------------------------------------------------------------
+2. OS SCRIPTS / FERRAMENTAS
+-------------------------------------------------------------------------------
+
+extractor.py
+    Le "starflight_original.bin" e varre o arquivo procurando sequencias de
+    6+ caracteres ASCII imprimiveis (texto legivel). Para cada trecho de
+    texto encontrado, procura na propria ROM por referencias validas a esse
+    endereco (instrucoes de codigo 68k que carregam o endereco, ou tabelas
+    de ponteiros contiguas). So mantem os textos que tem pelo menos uma
+    referencia valida encontrada - isso evita "traduzir" dados binarios que
+    coincidentemente parecem texto. Gera o arquivo "texts_to_translate.json"
+    com cada texto, seu endereco, seu(s) ponteiro(s) de referencia, e um
+    campo "portuguese" (inicialmente igual ao "english", pronto pra editar).
+
+auto_translate.py
+    Le o texts_to_translate.json e traduz automaticamente os textos usando a
+    API publica do Google Tradutor, em lotes. Como a fonte de caracteres do
+    jogo so tem letras sem acento (ver secao de limitacoes), o texto
+    traduzido passa por uma limpeza: remove acentos, converte pra maiusculas,
+    e filtra qualquer caractere fora do alfabeto ASCII padrao.
+
+compiler.py
+    Le o texts_to_translate.json (ja traduzido) e:
+      - expande a copia da ROM de 1MB para 2MB;
+      - escreve cada texto em portugues na area nova (a partir de 0x100000);
+      - atualiza cada ponteiro na ROM pra apontar pro novo endereco;
+      - recalcula o checksum padrao da Sega;
+      - aplica um patch essencial pra neutralizar uma protecao anti-copia
+        da Electronic Arts embutida no jogo (ver secao 4);
+    e salva o resultado em "starflight_translated.bin".
+
+verify_references.py
+    Ferramenta de diagnostico: reclassifica as referencias encontradas pelo
+    extractor.py (codigo vs. tabela) e avisa se alguma nao se encaixa em
+    nenhum padrao conhecido. Util pra auditar a extracao, nao e necessaria
+    pro fluxo normal de tradução.
+
+translator_gui.py / StarflightTradutor.exe
+    Interface grafica (Tkinter) que junta as etapas de edicao e compilacao
+    num programa so, sem precisar editar o JSON na mao nem rodar scripts
+    pelo terminal. Detalhes de uso na secao 3.
+
+
+-------------------------------------------------------------------------------
+3. COMO USAR O StarflightTradutor.exe
+-------------------------------------------------------------------------------
+
+O programa precisa estar na MESMA PASTA que "texts_to_translate.json" e
+"starflight_original.bin" (sua propria copia legal da ROM - ver secao 5).
+
+  - Lista principal: mostra todos os 1085 textos, offset, ingles e
+    portugues lado a lado.
+  - Busca: filtra a lista por qualquer palavra (ingles ou portugues).
+  - Filtro: "Todos" / "Nao traduzidos" / "Revisar (risco)".
+  - Itens destacados em AMARELO: o programa suspeita que sao nomes proprios
+    (nomes de criaturas, tripulantes, racas alienigenas) ou dados
+    binarios/graficos que o extrator capturou por engano - normalmente NAO
+    devem ser traduzidos. E so um aviso, nao um bloqueio.
+  - Clique num item pra ver o texto completo embaixo e editar a coluna
+    portugues.
+  - "Aplicar alteracao a este item": grava a edicao na memoria do programa.
+  - "Salvar tudo (JSON)": grava as alteracoes no texts_to_translate.json.
+  - "Compilar ROM": gera o starflight_translated.bin ja com tudo aplicado
+    (equivalente a rodar compiler.py).
+
+
+-------------------------------------------------------------------------------
+4. O MAIOR OBSTACULO TECNICO: A PROTECAO ANTI-COPIA DA EA
+-------------------------------------------------------------------------------
+
+Durante o desenvolvimento, qualquer ROM traduzida (mesmo mudando 1 unico
+byte em qualquer lugar do arquivo) resultava em tela preta ao ligar o jogo,
+mesmo com todos os ponteiros e checksums corrigidos corretamente.
+
+Investigando via engenharia reversa (disassembly do codigo 68k + testes
+controlados), foi descoberto que o Starflight (assim como varios outros
+jogos publicados pela Electronic Arts no Mega Drive/Genesis) tem uma rotina
+de checksum PROPRIA, separada do checksum padrao da Sega:
+
+  - Em 0x0FFFB0-0x0FFFFE, o jogo soma os primeiros ~1MB da propria ROM;
+  - Compara o resultado com uma constante fixa (0xEE496DD1);
+  - Se nao bater, o jogo salta pra uma rotina que apaga a paleta de cores
+    (tela fica preta) e trava num loop infinito - um mecanismo de protecao
+    contra copias/alteracoes nao autorizadas, tipico de jogos da EA dessa
+    epoca.
+
+A correcao aplicada (dentro de compiler.py e do StarflightTradutor.exe)
+troca uma unica instrucao de desvio condicional (BNE) por um NOP no
+endereco 0x0FFFD0, fazendo o jogo sempre considerar o checksum valido,
+independente do conteudo real da ROM. Sem esse patch, NENHUMA traducao
+funcionaria, nao importa quao correta estivesse tecnicamente.
+
+
+-------------------------------------------------------------------------------
+5. LIMITACOES CONHECIDAS
+-------------------------------------------------------------------------------
+
+a) SEM ACENTOS OU CEDILHA
+   A fonte de caracteres original do jogo (tiles 4bpp) so tem letras sem
+   acento (A-Z), numeros e pontuacao basica. Todo o texto traduzido usa
+   apenas letras "normais", sem á, é, í, ó, ú, ã, õ, ç, etc. Para ter
+   acentos de verdade seria necessario editar os tiles da fonte num editor
+   grafico (ex: Tile Molester, YY-CHR), substituindo caracteres pouco
+   usados (como colchetes) pelas versoes acentuadas - isso NAO foi feito
+   neste projeto.
+
+b) ~171 ITENS SINALIZADOS PARA REVISAO
+   Sao nomes proprios (criaturas, tripulantes, racas alienigenas, elementos
+   quimicos truncados) ou dados binarios/graficos que o extrator capturou
+   por engano junto com o texto de verdade. A maioria deve permanecer como
+   esta; alguns (como nomes de criaturas) foram traduzidos livremente e
+   podem ser revertidos se preferir manter o nome original em ingles.
+
+c) ~76 ITENS AINDA "NAO TRADUZIDOS" (portugues == ingles)
+   Na maior parte dos casos isso e proposital: palavras que ja tem a mesma
+   grafia em portugues (ex: "TROPICAL", "INFERNO"), notacao cientifica/
+   universal (formulas quimicas, sequencias binarias), ou os itens do item
+   (b) acima que nao devem ser traduzidos mesmo.
+
+d) TEXTOS QUE O EXTRATOR NAO ENCONTROU
+   Algumas telas de interface usam um jeito diferente de referenciar o
+   texto (nao um ponteiro de 4 bytes convencional), que o extractor.py nao
+   reconhece. Exemplo confirmado: a tela de "ENTER CAPTAIN'S NAME" (digitar
+   o nome do capitao) e os rotulos "A: SELECT LETTER" / "B: DONE" continuam
+   em ingles porque esse texto especifico nunca entrou no
+   texts_to_translate.json. Corrigir isso exigiria mapear manualmente esse
+   mecanismo de referencia alternativo.
+
+e) TAMANHO DO TEXTO E LAYOUT DE TELA
+   Como a traducao em portugues quase sempre e mais longa que o ingles, e
+   possivel que em algumas telas especificas o texto ultrapasse a caixa de
+   dialogo original (o jogo nao tem quebra de linha automatica alem do
+   caractere de controle "r" ja usado no ingles). Isso nao foi auditado
+   tela por tela - vale testar em jogo e ajustar manualmente qualquer texto
+   que corte ou desalinhe.
+
+f) TESTADO SOMENTE EM EMULADOR (BlastEm)
+   A correcao do checksum e do cabecalho da ROM foi validada especificamente
+   no emulador BlastEm 0.6.2. Nao foi testada em hardware real (Mega Drive
+   fisico com flashcart) nem em todos os outros emuladores existentes.
+   Diferentes emuladores podem se comportar de forma diferente com ROMs de
+   2MB reheadeadas como 1MB no cabecalho.
+
+g) QUALIDADE DA TRADUCAO
+   A maior parte do texto foi traduzida automaticamente via Google Tradutor
+   e depois limpa (sem acento, maiuscula). Nao houve uma revisao humana
+   linha por linha de todo o roteiro - erros de traducao automatica,
+   concordancia ou tom podem existir. O StarflightTradutor.exe existe
+   justamente para facilitar essa revisao/ajuste continuo pela comunidade.
+
+
+-------------------------------------------------------------------------------
+6. AVISO LEGAL
+-------------------------------------------------------------------------------
+
+Este projeto NAO distribui a ROM do jogo (nem original, nem traduzida). As
+ferramentas aqui soh funcionam se voce fornecer sua propria copia
+legalmente obtida do Starflight (Mega Drive) com o nome exato
+"starflight_original.bin" na mesma pasta.
