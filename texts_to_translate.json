@@ -854,14 +854,15 @@
         "offset_hex": "0x0196FA",
         "offset": 104186,
         "english": "A: LAND   C:ABORT",
-        "portuguese": "A: TERRA C: ABORT",
+        "portuguese": "A: TERRA  C:ABORT",
         "terminator": 255,
         "references": [
           "0x019356"
         ],
         "type": "standard"
       }
-    ]
+    ],
+    "keep_in_place": true
   },
   {
     "block_id": 11,

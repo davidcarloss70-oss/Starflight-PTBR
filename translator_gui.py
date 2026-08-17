@@ -143,6 +143,26 @@ def compile_rom(log_callback):
                 rom_data[current_write_offset] = 0xFF
                 current_write_offset += 1
 
+        elif block.get("keep_in_place"):
+            # Bloco marcado para NUNCA ser realocado: o texto traduzido é
+            # escrito DIRETO no endereço original, com o MESMO tamanho em
+            # bytes do texto em inglês (trunca/preenche com espaço se
+            # necessário). Usado quando dados não-texto (ex: tiles gráficos
+            # de borda/cursor) ficam colados logo depois do terminador e são
+            # lidos de forma sequencial pelo jogo - relocar o texto deixaria
+            # esses bytes gráficos originais "órfãos" no lugar velho e faria
+            # o jogo ler lixo (texto de outro item) como se fosse gráfico.
+            # Caso real: "A: LAND   C:ABORT" em 0x0196FA, seguido pelos bytes
+            # de tile do quadro do mapa/seta de seleção da tela de pouso.
+            for item in block["items"]:
+                orig_len = len(item["english"])
+                text_bytes = item["portuguese"].encode("latin1", errors="replace")
+                if len(text_bytes) != orig_len:
+                    log_callback(f"AVISO: item 0x{item['offset']:06X} (keep_in_place) com tradução de tamanho diferente do original ({len(text_bytes)} vs {orig_len} bytes) - ajustando.")
+                    text_bytes = text_bytes[:orig_len].ljust(orig_len, b" ")
+                off = item["offset"]
+                rom_data[off:off + orig_len] = text_bytes
+                total_strings_written += 1
         else:
             # Bloco padrão. Se QUALQUER item do bloco não tiver referência
             # própria, o bloco inteiro fica intocado - esses itens "órfãos"

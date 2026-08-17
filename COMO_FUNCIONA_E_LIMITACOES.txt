@@ -282,3 +282,57 @@ Este projeto NAO distribui a ROM do jogo (nem original, nem traduzida). As
 ferramentas aqui soh funcionam se voce fornecer sua propria copia
 legalmente obtida do Starflight (Mega Drive) com o nome exato
 "starflight_original.bin" na mesma pasta.
+
+
+-------------------------------------------------------------------------------
+7. BUG RESOLVIDO: moldura do mapa/seta de selecao corrompida (tela de pouso)
+-------------------------------------------------------------------------------
+
+PROBLEMA (confirmado por screenshot lado a lado, original vs traduzido):
+na tela de pouso/orbita (grade de altitude), a versao traduzida mostrava
+uma faixa quadriculada preto/branco no topo da grade, marcadores "+2 +3"
+na lateral esquerda, uma linha tracejada laranja embaixo, e a setinha
+branca de selecao (que existe no original, dentro da grade) sumia. Nenhum
+desses artefatos existe no original.
+
+CAUSA REAL (raiz confirmada por inspecao direta de bytes): a string
+"A: LAND   C:ABORT" (offset 0x0196FA, 17 caracteres, referencia propria em
+0x019356) tem, logo apos seu terminador 0xFF, 6 bytes de dados GRAFICOS
+colados em sequencia (04 05 06 07 08 09 - indices de tile da moldura do
+mapa/seta de selecao). O jogo le esses 6 bytes de forma SEQUENCIAL, logo
+depois de encontrar o terminador da string - ou seja, e o MESMO padrao de
+"dado colado logo apos o texto e lido por posicao relativa" ja visto na
+secao 4 (ancora+orfaos), so que aqui o "orfao" e grafico, nao texto, e por
+isso a heuristica de extracao (que so procura outros textos ASCII por
+perto) nunca detectou o problema.
+
+Como "A: LAND C:ABORT" TEM referencia propria, o compilador sempre a
+relocava normalmente pro espaco expandido (2MB) - isso por si so nao
+sobrescrevia nada. O problema e que, ao mover SO a string e deixar os 6
+bytes graficos originais pra tras (no endereco antigo, agora "orfaos"),
+o jogo passava a ler, logo apos o texto RELOCADO, o que quer que estivesse
+fisicamente em seguida no espaco expandido (normalmente bytes de OUTRA
+string traduzida) - e interpretava esse lixo como indices de tile,
+produzindo o padrao quadriculado/marcadores/linha tracejada e fazendo a
+seta de selecao sumir (o tile correto pra seta nunca era lido).
+
+CORRECAO: 0x0196FA foi marcado como bloco "keep_in_place" (novo campo
+no texts_to_translate.json e suporte novo em compiler.py/translator_gui.py).
+Esses blocos NUNCA sao relocados - o texto traduzido e escrito direto no
+endereco ORIGINAL, com o MESMO numero exato de bytes do ingles (preenchido
+com espaco se precisar), garantindo que os 6 bytes graficos logo depois
+continuem exatamente onde sempre estiveram. Traducao aplicada:
+"A: LAND   C:ABORT" (17 chars) -> "A: TERRA  C:ABORT" (17 chars).
+Verificado por comparacao byte a byte entre ROM original e traduzida: os
+6 bytes graficos (04 05 06 07 08 09...) sao identicos nas duas.
+
+NOTA SOBRE A ANALISE: o diagnostico geral (que algo relativo
+a essa string estava causando a corrupcao) estava CORRETO na direcao, mas
+o mecanismo exato que eles descreveram (Cenario A: sobrescrita direta;
+Cenario B: calculo de endereco relativo ao ponteiro do texto) nao batia
+com os bytes reais. O mecanismo real e um terceiro caso: leitura SEQUENCIAL
+de dados adjacentes apos o terminador, independente de qualquer ponteiro -
+o mesmo padrao ja catalogado na secao 4, aplicado a grafico em vez de texto.
+A instrucao LEA em 0x019306 (que aponta pra 0x1970C) e uma referencia
+separada e nao relacionada a esse bug - continua valendo a nota de que ela
+acessa aqueles bytes de forma independente do ponteiro do texto.
