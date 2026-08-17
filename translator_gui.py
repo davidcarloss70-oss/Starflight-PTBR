@@ -45,6 +45,23 @@ def is_risky(english_text):
     return False
 
 
+def compute_locked_offsets(blocks):
+    """Itens sem referência própria (references == []) e a âncora que os
+    precede imediatamente - o compilador não aplica tradução nenhuma deles
+    (ver compile_rom), porque mexer nesse grupo corrompe gráficos de UI em
+    outras telas. Usado só pra sinalizar na interface, não bloqueia edição
+    de fato (o usuário pode editar, só não vai ter efeito na ROM)."""
+    locked = set()
+    for block in blocks:
+        items = block["items"]
+        for i, item in enumerate(items):
+            if not item["references"]:
+                locked.add(item["offset"])
+                if i > 0 and items[i - 1]["references"]:
+                    locked.add(items[i - 1]["offset"])
+    return locked
+
+
 def load_items():
     with open(JSON_PATH, "r", encoding="utf-8") as f:
         blocks = json.load(f)
@@ -79,12 +96,32 @@ def compile_rom(log_callback):
     with open(JSON_PATH, "r", encoding="utf-8") as f:
         translation_blocks = json.load(f)
 
+    # Itens "sem referência própria" (references == []) só funcionam por
+    # estarem fisicamente colados, na ROM original, logo após um item com
+    # referência (a "âncora") - o jogo parece acessá-los por deslocamento
+    # fixo a partir da âncora, calculado com base no tamanho ORIGINAL em
+    # inglês. Realocar a âncora (ou mudar seu tamanho) corrompe essas linhas.
+    # Correção segura: não mexer em nada desse grupo (nem a âncora).
+    skip_offsets = set()
+    for block in translation_blocks:
+        items = block["items"]
+        for i, item in enumerate(items):
+            if not item["references"]:
+                skip_offsets.add(item["offset"])
+                if i > 0 and items[i - 1]["references"]:
+                    skip_offsets.add(items[i - 1]["offset"])
+
     current_write_offset = START_EXPANDED_OFFSET
     updated_pointers_count = 0
     total_strings_written = 0
+    skipped_count = 0
 
     for block in translation_blocks:
         for item in block["items"]:
+            if item["offset"] in skip_offsets:
+                skipped_count += 1
+                continue
+
             text_bytes = item["portuguese"].encode("latin1", errors="replace")
             terminator_byte = item["terminator"]
 
@@ -106,6 +143,7 @@ def compile_rom(log_callback):
                 updated_pointers_count += 1
 
     log_callback(f"Strings gravadas: {total_strings_written}")
+    log_callback(f"Itens pulados (grupos sem referência própria, preservados intactos): {skipped_count}")
     log_callback(f"Ponteiros atualizados: {updated_pointers_count}")
     log_callback(f"Dados escritos até 0x{current_write_offset:06X}")
 
@@ -164,7 +202,7 @@ class TranslatorApp(tk.Tk):
         self.filter_var = tk.StringVar(value="Todos")
         filter_box = ttk.Combobox(
             toolbar, textvariable=self.filter_var, state="readonly", width=22,
-            values=["Todos", "Não traduzidos", "Revisar (risco)"]
+            values=["Todos", "Não traduzidos", "Revisar (risco)", "Bloqueados (não aplicado)"]
         )
         filter_box.pack(side="left", padx=(4, 12))
         filter_box.bind("<<ComboboxSelected>>", lambda e: self._apply_filter())
@@ -200,6 +238,7 @@ class TranslatorApp(tk.Tk):
 
         self.tree.tag_configure("risky", background="#fff2cc")
         self.tree.tag_configure("untranslated", foreground="#888888")
+        self.tree.tag_configure("locked", background="#f5c6c6")
 
         self.tree.bind("<<TreeviewSelect>>", self._on_select)
 
@@ -229,10 +268,12 @@ class TranslatorApp(tk.Tk):
     def _load_data(self):
         try:
             self.blocks, self.items = load_items()
+            self.locked_offsets = compute_locked_offsets(self.blocks)
         except Exception as exc:
             messagebox.showerror("Erro ao carregar", str(exc))
             self.items = []
             self.blocks = []
+            self.locked_offsets = set()
         self._apply_filter()
         self._update_status()
 
@@ -240,9 +281,11 @@ class TranslatorApp(tk.Tk):
         total = len(self.items)
         untranslated = sum(1 for it in self.items if it["portuguese"] == it["english"])
         risky = sum(1 for it in self.items if is_risky(it["english"]))
+        locked = sum(1 for it in self.items if it["offset"] in self.locked_offsets)
         self.status_var.set(
             f"{total} textos no total  |  {untranslated} ainda não traduzidos  |  "
-            f"{risky} sinalizados para revisão (nomes próprios / dados binários)"
+            f"{risky} sinalizados para revisão (nomes próprios / dados binários)  |  "
+            f"{locked} bloqueados (sem referência própria - tradução não é aplicada na ROM)"
         )
 
     # -- filtro / listagem ----------------------------------------------
@@ -257,9 +300,13 @@ class TranslatorApp(tk.Tk):
             en = item["english"]
             pt = item["portuguese"]
 
+            locked = item["offset"] in self.locked_offsets
+
             if mode == "Não traduzidos" and pt != en:
                 continue
             if mode == "Revisar (risco)" and not is_risky(en):
+                continue
+            if mode == "Bloqueados (não aplicado)" and not locked:
                 continue
 
             if query and query not in en.lower() and query not in pt.lower():
@@ -267,14 +314,21 @@ class TranslatorApp(tk.Tk):
 
             risky = is_risky(en)
             tags = []
-            if risky:
+            if locked:
+                tags.append("locked")
+            elif risky:
                 tags.append("risky")
             if pt == en:
                 tags.append("untranslated")
 
             preview_en = en if len(en) <= 80 else en[:77] + "..."
             preview_pt = pt if len(pt) <= 80 else pt[:77] + "..."
-            flag_text = "revisar (nome/dado)" if risky else ""
+            if locked:
+                flag_text = "bloqueado (sem ref.)"
+            elif risky:
+                flag_text = "revisar (nome/dado)"
+            else:
+                flag_text = ""
 
             self.tree.insert(
                 "", "end", iid=str(idx),
@@ -300,7 +354,13 @@ class TranslatorApp(tk.Tk):
         self.portuguese_text.delete("1.0", "end")
         self.portuguese_text.insert("1.0", item["portuguese"])
 
-        if is_risky(item["english"]):
+        if item["offset"] in self.locked_offsets:
+            self.detail_flag_var.set(
+                "🔒 Este item não tem referência (ponteiro) própria - o compilador "
+                "NÃO aplica a tradução dele na ROM (evita corromper gráficos de UI "
+                "em outras telas). Editar aqui não muda o jogo compilado."
+            )
+        elif is_risky(item["english"]):
             self.detail_flag_var.set(
                 "⚠ Este texto parece ser nome próprio ou dado binário/gráfico — "
                 "provavelmente NÃO deve ser traduzido."

@@ -84,11 +84,16 @@ O programa precisa estar na MESMA PASTA que "texts_to_translate.json" e
   - Lista principal: mostra todos os 1085 textos, offset, ingles e
     portugues lado a lado.
   - Busca: filtra a lista por qualquer palavra (ingles ou portugues).
-  - Filtro: "Todos" / "Nao traduzidos" / "Revisar (risco)".
+  - Filtro: "Todos" / "Nao traduzidos" / "Revisar (risco)" / "Bloqueados
+    (nao aplicado)".
   - Itens destacados em AMARELO: o programa suspeita que sao nomes proprios
     (nomes de criaturas, tripulantes, racas alienigenas) ou dados
     binarios/graficos que o extrator capturou por engano - normalmente NAO
     devem ser traduzidos. E so um aviso, nao um bloqueio.
+  - Itens destacados em VERMELHO: "bloqueados" - o compilador NAO aplica a
+    traducao desses itens na ROM final (ver secao 5-A, "grupos ancora +
+    orfaos"). Editar o texto no programa nao tem efeito nenhum no jogo
+    compilado; o campo fica ali soh pra referencia/contexto.
   - Clique num item pra ver o texto completo embaixo e editar a coluna
     portugues.
   - "Aplicar alteracao a este item": grava a edicao na memoria do programa.
@@ -122,6 +127,53 @@ troca uma unica instrucao de desvio condicional (BNE) por um NOP no
 endereco 0x0FFFD0, fazendo o jogo sempre considerar o checksum valido,
 independente do conteudo real da ROM. Sem esse patch, NENHUMA traducao
 funcionaria, nao importa quao correta estivesse tecnicamente.
+
+
+-------------------------------------------------------------------------------
+4-A. SEGUNDO OBSTACULO: GRUPOS "ANCORA + ORFAOS" (grafismo corrompido)
+-------------------------------------------------------------------------------
+
+Depois que o jogo passou a bootar e os testes iniciais (titulo, menu,
+briefing) funcionaram bem, testes mais profundos (menu de selecao de
+tripulacao, tela de orbita, comandos de nave) revelaram graficos de UI
+corrompidos (icones quebrados, linhas de menu faltando) em telas
+especificas - mesmo sem nenhum erro aparente no texto.
+
+Causa: o extrator classifica um BLOCO inteiro de strings como valido se
+PELO MENOS UMA string do bloco tiver uma referencia (ponteiro de 4 bytes)
+encontrada. Isso significa que MUITAS strings dentro de um bloco podem nao
+ter referencia PROPRIA nenhuma (campo "references": [] no JSON) - elas so
+funcionavam, na ROM original, por estarem fisicamente coladas logo depois
+de uma outra string que TEM referencia (a "ancora"). Tudo indica que o
+jogo acessa essas linhas "orfas" por um DESLOCAMENTO FIXO somado ao
+endereco da ancora - deslocamento esse calculado, em tempo de compilacao
+do jogo original, a partir do TAMANHO EM BYTES do texto ORIGINAL em ingles.
+
+Ao traduzir e realocar a ancora pra area expandida da ROM, o texto
+traduzido quase sempre tem tamanho diferente do original. O deslocamento
+fixo (que o codigo do jogo nao recalcula, so soma um numero fixo) passa
+entao a apontar pra um lugar errado na memoria - as vezes lixo, as vezes
+o meio de outra string, resultando em graficos corrompidos ou texto
+faltando, mesmo a ancora em si exibindo a traducao corretamente.
+
+Correcao aplicada: o compilador agora identifica automaticamente esses
+grupos (qualquer item com "references": [] MAIS o item imediatamente
+anterior no mesmo bloco, se esse tiver referencia propria) e SIMPLESMENTE
+NAO MEXE NELES - nem a ancora e realocada, nem os orfaos. Esses trechos
+ficam byte-a-byte identicos a ROM original (verificado e confirmado), ou
+seja, aparecem em ingles nas telas afetadas. Isso afeta 227 itens do JSON
+(200 deles ja estavam traduzidos e foram revertidos pra ingles).
+
+O StarflightTradutor.exe sinaliza esses itens em VERMELHO na lista
+("bloqueado (sem ref.)") - editar o texto deles no programa nao tem efeito
+na ROM compilada, ja que o compilador os ignora deliberadamente.
+
+Corrigir isso "de verdade" (fazer esses menus aceitarem texto traduzido de
+tamanho diferente) exigiria localizar e editar a instrucao especifica no
+codigo 68k que calcula esse deslocamento fixo, pra cada grupo afetado -
+uma investigacao equivalente, em esforco, a rotina de checksum da EA, soh
+que teria que ser refeita pra cada grupo/tela individualmente. Nao foi
+feito ate agora.
 
 
 -------------------------------------------------------------------------------

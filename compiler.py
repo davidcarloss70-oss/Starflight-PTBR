@@ -32,30 +32,58 @@ def compile_rom():
     with open(JSON_INPUT, "r", encoding="utf-8") as f:
         translation_blocks = json.load(f)
 
+    # 2b. Identificar itens "sem referência própria" (references == []) e as
+    # âncoras que os precedem imediatamente no mesmo bloco. Esses itens não
+    # têm um ponteiro de 4 bytes próprio apontando pra eles - eles só
+    # funcionam por estarem fisicamente colados, na ROM original, logo após
+    # um item que TEM referência (a "âncora"). Tudo indica que o jogo acessa
+    # essas linhas por um deslocamento fixo somado ao endereço da âncora
+    # (calculado a partir do tamanho ORIGINAL em inglês), não por ponteiro
+    # nem por varredura sequencial genérica. Se a âncora for realocada (ou
+    # mudar de tamanho), esse deslocamento fixo passa a apontar pro lugar
+    # errado - na prática isso corrompeu gráficos de UI em telas mais
+    # profundas do jogo (menu de tripulação, órbita, etc) mesmo com pouca
+    # mudança de texto. A correção mais segura: não mexer em NADA desse
+    # grupo (nem a âncora, nem os itens sem referência) - mantém o
+    # comportamento idêntico ao da ROM original nessas telas.
+    skip_offsets = set()
+    for block in translation_blocks:
+        items = block["items"]
+        for i, item in enumerate(items):
+            if not item["references"]:
+                skip_offsets.add(item["offset"])
+                if i > 0 and items[i - 1]["references"]:
+                    skip_offsets.add(items[i - 1]["offset"])
+
     # 3. Gravar strings traduzidas e atualizar ponteiros
     current_write_offset = START_EXPANDED_OFFSET
     updated_pointers_count = 0
     total_strings_written = 0
+    skipped_count = 0
 
     print("Escrevendo textos traduzidos e atualizando referências...")
 
     for block in translation_blocks:
         for item in block["items"]:
+            if item["offset"] in skip_offsets:
+                skipped_count += 1
+                continue
+
             text_bytes = item["portuguese"].encode("latin1", errors="replace")
             terminator_byte = item["terminator"]
 
             new_offset = current_write_offset
-            
+
             # Escrever a string traduzida no espaço expandido
             rom_data[new_offset : new_offset + len(text_bytes)] = text_bytes
             rom_data[new_offset + len(text_bytes)] = terminator_byte
-            
+
             # Avançar o cursor de escrita (garantindo alinhamento par)
             current_write_offset += len(text_bytes) + 1
             if current_write_offset % 2 != 0:
                 rom_data[current_write_offset] = 0xFF
                 current_write_offset += 1
-                
+
             total_strings_written += 1
 
             # Atualizar todas as referências apontadas para esta string
@@ -66,6 +94,7 @@ def compile_rom():
                 updated_pointers_count += 1
 
     print(f"Total de strings gravadas na área expandida: {total_strings_written}")
+    print(f"Total de itens pulados (grupos sem referência própria, preservados intactos): {skipped_count}")
     print(f"Total de ponteiros/referências atualizados na ROM: {updated_pointers_count}")
     print(f"Dados escritos de 0x{START_EXPANDED_OFFSET:06X} até 0x{current_write_offset:06X}")
 

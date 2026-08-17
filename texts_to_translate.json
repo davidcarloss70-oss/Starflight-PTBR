@@ -269,7 +269,7 @@
         "offset_hex": "0x00F4BC",
         "offset": 62652,
         "english": ": ICE.",
-        "portuguese": ": GELO.",
+        "portuguese": ": ICE.",
         "terminator": 255,
         "references": []
       },
@@ -385,7 +385,7 @@
         "offset_hex": "0x018C7E",
         "offset": 101502,
         "english": "PULSE CANNON         MU",
-        "portuguese": "CANHAO DE PULSO MU",
+        "portuguese": "PULSE CANNON         MU",
         "terminator": 255,
         "references": [
           "0x015D48",
@@ -396,7 +396,7 @@
         "offset_hex": "0x018C96",
         "offset": 101526,
         "english": "TRI-CANNON           MU",
-        "portuguese": "TRI-CANNON MU",
+        "portuguese": "TRI-CANNON           MU",
         "terminator": 255,
         "references": []
       },
@@ -404,7 +404,7 @@
         "offset_hex": "0x018CAE",
         "offset": 101550,
         "english": "BUZZ BOMBS           MU",
-        "portuguese": "BOMBAS MU",
+        "portuguese": "BUZZ BOMBS           MU",
         "terminator": 255,
         "references": []
       },
@@ -412,7 +412,7 @@
         "offset_hex": "0x018CC6",
         "offset": 101574,
         "english": "FUSION BLASTER       MU",
-        "portuguese": "BLASTER DE FUSAO MU",
+        "portuguese": "FUSION BLASTER       MU",
         "terminator": 255,
         "references": []
       },
@@ -420,7 +420,7 @@
         "offset_hex": "0x018CDE",
         "offset": 101598,
         "english": "PHOTON TORPEDO       MU",
-        "portuguese": "FOTON TORPEDO MU",
+        "portuguese": "PHOTON TORPEDO       MU",
         "terminator": 255,
         "references": []
       },
@@ -428,7 +428,7 @@
         "offset_hex": "0x018CF6",
         "offset": 101622,
         "english": "LANCE                MU",
-        "portuguese": "LANCE MU",
+        "portuguese": "LANCE                MU",
         "terminator": 255,
         "references": []
       },
@@ -436,7 +436,7 @@
         "offset_hex": "0x018D0E",
         "offset": 101646,
         "english": "TWIN-BEAM            MU",
-        "portuguese": "MU DE FEIXE DUPLO",
+        "portuguese": "TWIN-BEAM            MU",
         "terminator": 255,
         "references": []
       },
@@ -444,7 +444,7 @@
         "offset_hex": "0x018D26",
         "offset": 101670,
         "english": "PHASER               MU",
-        "portuguese": "FASE MU",
+        "portuguese": "PHASER               MU",
         "terminator": 255,
         "references": []
       },
@@ -452,7 +452,7 @@
         "offset_hex": "0x018D40",
         "offset": 101696,
         "english": "0LANCE                MU",
-        "portuguese": "0LANCE MU",
+        "portuguese": "0LANCE                MU",
         "terminator": 255,
         "references": []
       },
@@ -460,7 +460,7 @@
         "offset_hex": "0x018D59",
         "offset": 101721,
         "english": "TWIN-BEAM            MU",
-        "portuguese": "MU DE FEIXE DUPLO",
+        "portuguese": "TWIN-BEAM            MU",
         "terminator": 255,
         "references": []
       },
@@ -468,7 +468,7 @@
         "offset_hex": "0x018D71",
         "offset": 101745,
         "english": "PHASER               MU",
-        "portuguese": "FASE MU",
+        "portuguese": "PHASER               MU",
         "terminator": 255,
         "references": []
       },
@@ -476,7 +476,7 @@
         "offset_hex": "0x018D8C",
         "offset": 101772,
         "english": "!-<H[aICE RUNNERS",
-        "portuguese": "!-<H[aCORREDORES DE GELO",
+        "portuguese": "!-<H[aICE RUNNERS",
         "terminator": 255,
         "references": []
       },
@@ -484,7 +484,7 @@
         "offset_hex": "0x018D9E",
         "offset": 101790,
         "english": "SNOW TREADS",
-        "portuguese": "PASSOS DE NEVE",
+        "portuguese": "SNOW TREADS",
         "terminator": 255,
         "references": []
       },
@@ -492,7 +492,7 @@
         "offset_hex": "0x018DAA",
         "offset": 101802,
         "english": "PONTOONS",
-        "portuguese": "PONTOES",
+        "portuguese": "PONTOONS",
         "terminator": 255,
         "references": []
       },
@@ -500,7 +500,7 @@
         "offset_hex": "0x018DB3",
         "offset": 101811,
         "english": "EXTRA CARGO",
-        "portuguese": "CARGA EXTRA",
+        "portuguese": "EXTRA CARGO",
         "terminator": 255,
         "references": []
       },
@@ -508,7 +508,7 @@
         "offset_hex": "0x018DBF",
         "offset": 101823,
         "english": "TURBO CHARGERS",
-        "portuguese": "CARREGADORES TURBO",
+        "portuguese": "TURBO CHARGERS",
         "terminator": 255,
         "references": []
       },
@@ -516,7 +516,7 @@
         "offset_hex": "0x018DCE",
         "offset": 101838,
         "english": "HEAVY ARMOR",
-        "portuguese": "ARMADURA PESADA",
+        "portuguese": "HEAVY ARMOR",
         "terminator": 255,
         "references": []
       },
@@ -524,7 +524,7 @@
         "offset_hex": "0x018DDA",
         "offset": 101850,
         "english": "WIDE ANGLE STUNNER",
-        "portuguese": "ATORDOADOR DE GRANDE ANGULO",
+        "portuguese": "WIDE ANGLE STUNNER",
         "terminator": 255,
         "references": []
       },
@@ -532,7 +532,7 @@
         "offset_hex": "0x018DF3",
         "offset": 101875,
         "english": "MINERAL SCANNER 2",
-        "portuguese": "SCANNER MINERAL 2",
+        "portuguese": "MINERAL SCANNER 2",
         "terminator": 255,
         "references": []
       }
@@ -547,7 +547,7 @@
         "offset_hex": "0x018E2A",
         "offset": 101930,
         "english": "02-02-4620 MESSAGE 2r",
-        "portuguese": "02-02-4620 MENSAGEM 2r",
+        "portuguese": "02-02-4620 MESSAGE 2r",
         "terminator": 255,
         "references": []
       },
@@ -555,7 +555,7 @@
         "offset_hex": "0x018E40",
         "offset": 101952,
         "english": "02-02-4620 MESSAGE 3r",
-        "portuguese": "02-02-4620 MENSAGEM 3r",
+        "portuguese": "02-02-4620 MESSAGE 3r",
         "terminator": 255,
         "references": []
       },
@@ -563,7 +563,7 @@
         "offset_hex": "0x018E56",
         "offset": 101974,
         "english": "02-02-4620 MESSAGE 4r",
-        "portuguese": "02-02-4620 MENSAGEM 4r",
+        "portuguese": "02-02-4620 MESSAGE 4r",
         "terminator": 255,
         "references": []
       },
@@ -571,7 +571,7 @@
         "offset_hex": "0x018E6C",
         "offset": 101996,
         "english": "02-02-4620 MESSAGE 5r",
-        "portuguese": "02-02-4620 MENSAGEM 5r",
+        "portuguese": "02-02-4620 MESSAGE 5r",
         "terminator": 255,
         "references": []
       },
@@ -579,7 +579,7 @@
         "offset_hex": "0x018E82",
         "offset": 102018,
         "english": "02-02-4620 MESSAGE 6r",
-        "portuguese": "02-02-4620 MENSAGEM 6r",
+        "portuguese": "02-02-4620 MESSAGE 6r",
         "terminator": 255,
         "references": []
       },
@@ -637,7 +637,7 @@
         "offset_hex": "0x018EE1",
         "offset": 102113,
         "english": "LACK OF WATER",
-        "portuguese": "FALTA DE AGUA",
+        "portuguese": "LACK OF WATER",
         "terminator": 255,
         "references": [
           "0x018566"
@@ -647,7 +647,7 @@
         "offset_hex": "0x018EF1",
         "offset": 102129,
         "english": "THIS PLANET PROVED TO BE",
-        "portuguese": "ESTE PLANETA PROVOU SER",
+        "portuguese": "THIS PLANET PROVED TO BE",
         "terminator": 255,
         "references": []
       },
@@ -655,7 +655,7 @@
         "offset_hex": "0x018F0C",
         "offset": 102156,
         "english": "SUITABLE FOR COLONIZATION.",
-        "portuguese": "ADEQUADO PARA COLONIZACAO.",
+        "portuguese": "SUITABLE FOR COLONIZATION.",
         "terminator": 255,
         "references": []
       },
@@ -663,7 +663,7 @@
         "offset_hex": "0x018F29",
         "offset": 102185,
         "english": "YOU HAVE EARNED A BONUS OF .....",
-        "portuguese": "VOCE GANHOU UM BONUS DE.....",
+        "portuguese": "YOU HAVE EARNED A BONUS OF .....",
         "terminator": 255,
         "references": []
       },
@@ -671,7 +671,7 @@
         "offset_hex": "0x018F4C",
         "offset": 102220,
         "english": "MU\\S FOR THIS RECOMMENDATION",
-        "portuguese": "MU\\S PARA ESTA RECOMENDACAO",
+        "portuguese": "MU\\S FOR THIS RECOMMENDATION",
         "terminator": 255,
         "references": []
       },
@@ -679,7 +679,7 @@
         "offset_hex": "0x018F6C",
         "offset": 102252,
         "english": "GOOD WORK.  YOU HAVE LOCATED AN",
-        "portuguese": "BOM TRABALHO.  VOCE LOCALIZOU UM",
+        "portuguese": "GOOD WORK.  YOU HAVE LOCATED AN",
         "terminator": 255,
         "references": []
       },
@@ -687,7 +687,7 @@
         "offset_hex": "0x018F8E",
         "offset": 102286,
         "english": "OPTIMAL PLANET.",
-        "portuguese": "PLANETA OTIMO.",
+        "portuguese": "OPTIMAL PLANET.",
         "terminator": 255,
         "references": []
       },
@@ -695,7 +695,7 @@
         "offset_hex": "0x018FA0",
         "offset": 102304,
         "english": "YOU HAVE EARNED A BONUS OF .....",
-        "portuguese": "VOCE GANHOU UM BONUS DE.....",
+        "portuguese": "YOU HAVE EARNED A BONUS OF .....",
         "terminator": 255,
         "references": []
       },
@@ -703,7 +703,7 @@
         "offset_hex": "0x018FC3",
         "offset": 102339,
         "english": "MU\\S FOR THIS RECOMMENDATION",
-        "portuguese": "MU\\S PARA ESTA RECOMENDACAO",
+        "portuguese": "MU\\S FOR THIS RECOMMENDATION",
         "terminator": 255,
         "references": []
       },
@@ -711,7 +711,7 @@
         "offset_hex": "0x018FE3",
         "offset": 102371,
         "english": "YOU HAVE BEEN FINED ..... MU\\S",
-        "portuguese": "VOCE FOI MULTO ..... MU\\S",
+        "portuguese": "YOU HAVE BEEN FINED ..... MU\\S",
         "terminator": 255,
         "references": []
       },
@@ -719,7 +719,7 @@
         "offset_hex": "0x019005",
         "offset": 102405,
         "english": "YOU HAVE BEEN FINED 100 MU\\S",
-        "portuguese": "VOCE FOI MULTADO EM 100 MU\\S",
+        "portuguese": "YOU HAVE BEEN FINED 100 MU\\S",
         "terminator": 255,
         "references": []
       },
@@ -727,7 +727,7 @@
         "offset_hex": "0x019024",
         "offset": 102436,
         "english": "THIS IS ONLY A WARNING.  YOUR NEXT",
-        "portuguese": "ISTO E APENAS UM AVISO.  SEU PROXIMO",
+        "portuguese": "THIS IS ONLY A WARNING.  YOUR NEXT",
         "terminator": 255,
         "references": []
       },
@@ -735,7 +735,7 @@
         "offset_hex": "0x019049",
         "offset": 102473,
         "english": "FINE WILL BE HEAVY.",
-        "portuguese": "BEM SERA PESADO.",
+        "portuguese": "FINE WILL BE HEAVY.",
         "terminator": 255,
         "references": []
       }
@@ -1021,7 +1021,7 @@
         "offset_hex": "0x01C10C",
         "offset": 114956,
         "english": "COPPER",
-        "portuguese": "COBRE",
+        "portuguese": "COPPER",
         "terminator": 255,
         "references": [
           "0x01C0AC"
@@ -1031,7 +1031,7 @@
         "offset_hex": "0x01C118",
         "offset": 114968,
         "english": "MOLYBDENUM",
-        "portuguese": "MOLIBDENIO",
+        "portuguese": "MOLYBDENUM",
         "terminator": 255,
         "references": []
       },
@@ -1169,7 +1169,7 @@
         "offset_hex": "0x01C1A1",
         "offset": 115105,
         "english": "ATMOSPHERE",
-        "portuguese": "ATMOSFERA",
+        "portuguese": "ATMOSPHERE",
         "terminator": 0,
         "references": [
           "0x00F0A2"
@@ -1179,7 +1179,7 @@
         "offset_hex": "0x01C1AC",
         "offset": 115116,
         "english": "HYDROSPHERE",
-        "portuguese": "HIDROSFERA",
+        "portuguese": "HYDROSPHERE",
         "terminator": 0,
         "references": []
       },
@@ -1187,7 +1187,7 @@
         "offset_hex": "0x01C1B8",
         "offset": 115128,
         "english": "LITHOSPHER",
-        "portuguese": "LITOSFERA",
+        "portuguese": "LITHOSPHER",
         "terminator": 197,
         "references": []
       }
@@ -1947,7 +1947,7 @@
         "offset_hex": "0x01F079",
         "offset": 127097,
         "english": "I REPEAT ... WE HAVE BEEN FORCED TO PUT DOWN.  WE WILL BE AT COORDINATES 22N X 97W.  WE WILL SURVIVE AS LONG AS WE CAN.  I JUST HOPE YOU ARE NOT TOO LATE.  SMELENUF OUT.",
-        "portuguese": "REPITO... FOMOS FORCADOS A DEIXAR.  ESTAREMOS NAS COORDENADAS 22N X 97W.  SOBREVIVEREMOS ENQUANTO PUDERMOS.  SO ESPERO QUE VOCE NAO SEJA TARDE DEMAIS.  SMELENUF FORA.",
+        "portuguese": "I REPEAT ... WE HAVE BEEN FORCED TO PUT DOWN.  WE WILL BE AT COORDINATES 22N X 97W.  WE WILL SURVIVE AS LONG AS WE CAN.  I JUST HOPE YOU ARE NOT TOO LATE.  SMELENUF OUT.",
         "terminator": 255,
         "references": [
           "0x01F2A4"
@@ -1957,7 +1957,7 @@
         "offset_hex": "0x01F123",
         "offset": 127267,
         "english": "PULL OVER!  THIS IS THE INTERSTEL CORPORATE POLICE.  YOU ARE UNDER ARREST.  DROP ALL SHIELDS AND DISARM ALL WEAPONS.  YOU ARE IN VIOLATION OF INTERGALACTIC SOFTWARE THEFT LAW.  DO NOT ATTEMPT TO RESIST.",
-        "portuguese": "ESTACIONAR!  ESTA E A POLICIA CORPORATIVA DA INTERSTEL.  VOCE ESTA PRESO.  DEIXE TODOS OS ESCUDOS E DESARME TODAS AS ARMAS.  VOCE ESTA VIOLANDO A LEI INTERGALACTICA DE ROUBO DE SOFTWARE.  NAO TENTE RESISTIR.",
+        "portuguese": "PULL OVER!  THIS IS THE INTERSTEL CORPORATE POLICE.  YOU ARE UNDER ARREST.  DROP ALL SHIELDS AND DISARM ALL WEAPONS.  YOU ARE IN VIOLATION OF INTERGALACTIC SOFTWARE THEFT LAW.  DO NOT ATTEMPT TO RESIST.",
         "terminator": 255,
         "references": []
       },
@@ -1973,7 +1973,7 @@
         "offset_hex": "0x01F235",
         "offset": 127541,
         "english": ":RESPOND:",
-        "portuguese": ":RESPONDER:",
+        "portuguese": ":RESPOND:",
         "terminator": 255,
         "references": []
       }
@@ -1988,7 +1988,7 @@
         "offset_hex": "0x01F37E",
         "offset": 127870,
         "english": "RECEIVEING:r...r STATEMENT",
-        "portuguese": "RECEBENDO:r...r DECLARACAO",
+        "portuguese": "RECEIVEING:r...r STATEMENT",
         "terminator": 0,
         "references": []
       },
@@ -1996,7 +1996,7 @@
         "offset_hex": "0x01F399",
         "offset": 127897,
         "english": " QUESTION",
-        "portuguese": " PERGUNTA",
+        "portuguese": " QUESTION",
         "terminator": 0,
         "references": []
       },
@@ -2004,7 +2004,7 @@
         "offset_hex": "0x01F3A3",
         "offset": 127907,
         "english": " POSTURE",
-        "portuguese": " POSTURA",
+        "portuguese": " POSTURE",
         "terminator": 0,
         "references": []
       },
@@ -2012,7 +2012,7 @@
         "offset_hex": "0x01F3AC",
         "offset": 127916,
         "english": " TERMINATE",
-        "portuguese": " TERMINAR",
+        "portuguese": " TERMINATE",
         "terminator": 0,
         "references": []
       },
@@ -2020,7 +2020,7 @@
         "offset_hex": "0x01F3B7",
         "offset": 127927,
         "english": " OBSEQUIOUS",
-        "portuguese": " OBSEQUIO",
+        "portuguese": " OBSEQUIOUS",
         "terminator": 0,
         "references": [
           "0x01F702"
@@ -2030,7 +2030,7 @@
         "offset_hex": "0x01F3C3",
         "offset": 127939,
         "english": " FRIENDLY",
-        "portuguese": " AMIGAVEL",
+        "portuguese": " FRIENDLY",
         "terminator": 0,
         "references": []
       },
@@ -2038,7 +2038,7 @@
         "offset_hex": "0x01F3CD",
         "offset": 127949,
         "english": " HOSTILE",
-        "portuguese": " HOSTIL",
+        "portuguese": " HOSTILE",
         "terminator": 0,
         "references": []
       },
@@ -2046,7 +2046,7 @@
         "offset_hex": "0x01F3D6",
         "offset": 127958,
         "english": " THEMSELVES",
-        "portuguese": " ELES MESMOS",
+        "portuguese": " THEMSELVES",
         "terminator": 0,
         "references": [
           "0x01F782"
@@ -2056,7 +2056,7 @@
         "offset_hex": "0x01F3E2",
         "offset": 127970,
         "english": " OTHER RACES",
-        "portuguese": " OUTRAS RACAS",
+        "portuguese": " OTHER RACES",
         "terminator": 0,
         "references": []
       },
@@ -2064,7 +2064,7 @@
         "offset_hex": "0x01F3EF",
         "offset": 127983,
         "english": " OLD EMPIRE",
-        "portuguese": " ANTIGO IMPERIO",
+        "portuguese": " OLD EMPIRE",
         "terminator": 0,
         "references": []
       },
@@ -2072,7 +2072,7 @@
         "offset_hex": "0x01F3FB",
         "offset": 127995,
         "english": " THE ANCIENTS",
-        "portuguese": " OS ANTIGOS",
+        "portuguese": " THE ANCIENTS",
         "terminator": 0,
         "references": []
       },
@@ -2080,7 +2080,7 @@
         "offset_hex": "0x01F409",
         "offset": 128009,
         "english": " GENERAL INFO",
-        "portuguese": " INFORMACOES GERAIS",
+        "portuguese": " GENERAL INFO",
         "terminator": 0,
         "references": []
       },
@@ -2088,7 +2088,7 @@
         "offset_hex": "0x01F417",
         "offset": 128023,
         "english": "YOUR RACErOTHER RACESrTHE OLD EMPIRErTHE ANCIENTSr",
-        "portuguese": "SUA CORRIDArOUTRAS RACASrO VELHO IMPERIOrOS ANTIGOSr",
+        "portuguese": "YOUR RACErOTHER RACESrTHE OLD EMPIRErTHE ANCIENTSr",
         "terminator": 255,
         "references": []
       }
@@ -2201,7 +2201,7 @@
         "offset_hex": "0x0226FB",
         "offset": 141051,
         "english": "pCAPTAIN, THEY HAVE RAISED THEIR SHIELDS.",
-        "portuguese": "pCAPITAO, ELES LEVANTARAM OS ESCUDOS.",
+        "portuguese": "pCAPTAIN, THEY HAVE RAISED THEIR SHIELDS.",
         "terminator": 255,
         "references": []
       },
@@ -2403,7 +2403,7 @@
         "offset_hex": "0x023C5E",
         "offset": 146526,
         "english": "A6CAPTAIN, SOMETHING VERY STRANGE IS HAPPENING.  I AM RECEIVING A MESSAGE BUT THERE DOESN\\T SEEM TO BE ANY TRANSMISSION.",
-        "portuguese": "A6 CAPITAO, ALGO MUITO ESTRANHO ESTA ACONTECENDO.  ESTOU RECEBENDO UMA MENSAGEM MAS NAO PARECE HA TRANSMISSAO.",
+        "portuguese": "A6CAPTAIN, SOMETHING VERY STRANGE IS HAPPENING.  I AM RECEIVING A MESSAGE BUT THERE DOESN\\T SEEM TO BE ANY TRANSMISSION.",
         "terminator": 255,
         "references": []
       },
@@ -5202,7 +5202,7 @@
         "offset_hex": "0x02CECE",
         "offset": 184014,
         "english": "NOW TERMINATING COMMUNICATIONS.",
-        "portuguese": "AGORA ENCERRANDO AS COMUNICACOES.",
+        "portuguese": "NOW TERMINATING COMMUNICATIONS.",
         "terminator": 255,
         "references": [
           "0x02AF1A"
@@ -6548,7 +6548,7 @@
         "offset_hex": "0x0320F0",
         "offset": 205040,
         "english": "Gt   INVOICE - ...SECOND SHIPMENT OF IRIDIUM TO ARRIVE AT 56N X 16W H.Q. ON MARDAN 2 NO LATER THAN THE THIRD DAY OF... r   LOG - ...PEOPLE ARE PANICKING.  THE SOLAR FLARES ARE INTENSIFYING.  THE BEST ESTIMATES GIVE US 3 DAYS AT THE OUTSIDE.    LOG ENTRY 2-28-3480  SURFACE TEMP. IS AT 150 DEGREES C; ONLY BEING THIS FAR UNDERGROUND HAS KEPT US ALIVE THIS LONG... r   CORNERSTONE INSCRIPTION - BEN AND ANNA\\S ACADEMY OF INDEPENDENT THINKING ",
-        "portuguese": "Gt   FATURA - ...SEGUNDA REMESSA DE IRIDIUM PARA CHEGAR A 56N X 16W H.Q. NO DIA 2 DE MARDAN, NAO DEPOIS DO TERCEIRO DIA DE... r   LOG - ... AS PESSOAS ESTAO EM PANICO.  AS QUEBRAS SOLARES ESTAO SE INTENSIFICANDO.  AS MELHORES ESTIMATIVAS DAO-NOS 3 DIAS NO EXTERIOR.    REGISTRO DE REGISTRO 2-28-3480 TEMPERATURA DE SUPERFICIE. ESTA A 150 GRAUS C; SO ESTAR TAO SUBTERRANEO NOS MANTEU VIVOS POR TANTO TEMPO... r   INSCRICAO PEDRA ANGULAR - ACADEMIA DE PENSAMENTO INDEPENDENTE DE BEN E ANNA ",
+        "portuguese": "Gt   INVOICE - ...SECOND SHIPMENT OF IRIDIUM TO ARRIVE AT 56N X 16W H.Q. ON MARDAN 2 NO LATER THAN THE THIRD DAY OF... r   LOG - ...PEOPLE ARE PANICKING.  THE SOLAR FLARES ARE INTENSIFYING.  THE BEST ESTIMATES GIVE US 3 DAYS AT THE OUTSIDE.    LOG ENTRY 2-28-3480  SURFACE TEMP. IS AT 150 DEGREES C; ONLY BEING THIS FAR UNDERGROUND HAS KEPT US ALIVE THIS LONG... r   CORNERSTONE INSCRIPTION - BEN AND ANNA\\S ACADEMY OF INDEPENDENT THINKING ",
         "terminator": 255,
         "references": []
       },
@@ -6913,7 +6913,7 @@
         "offset_hex": "0x034A38",
         "offset": 215608,
         "english": "qxHAIL TO THEE AND WELL MET ARE WE.  THOU ART WELCOME, FRIENDS OF THE ELOWAN.",
-        "portuguese": "qxSAUDACOES A TI E BEM ENCONTRADOS SOMOS NOS.  SAO BEM-VINDOS, AMIGOS DO ELOWAN.",
+        "portuguese": "qxHAIL TO THEE AND WELL MET ARE WE.  THOU ART WELCOME, FRIENDS OF THE ELOWAN.",
         "terminator": 255,
         "references": []
       },
@@ -7706,7 +7706,7 @@
         "offset_hex": "0x039D00",
         "offset": 236800,
         "english": "SPEMIN",
-        "portuguese": "ESPEMINA",
+        "portuguese": "SPEMIN",
         "terminator": 255,
         "references": []
       },
@@ -8299,7 +8299,7 @@
         "offset_hex": "0x03B26E",
         "offset": 242286,
         "english": "`          PROJECT MANAGER",
-        "portuguese": "` GERENTE DE PROJETO",
+        "portuguese": "`          PROJECT MANAGER",
         "terminator": 255,
         "references": []
       },
@@ -8687,7 +8687,7 @@
         "offset_hex": "0x070C60",
         "offset": 461920,
         "english": "!SCIENCE",
-        "portuguese": "!CIENCIA",
+        "portuguese": "!SCIENCE",
         "terminator": 0,
         "references": []
       },
@@ -8695,7 +8695,7 @@
         "offset_hex": "0x070C69",
         "offset": 461929,
         "english": "!NAVIGATOR",
-        "portuguese": "!NAVEGADOR",
+        "portuguese": "!NAVIGATOR",
         "terminator": 0,
         "references": []
       },
@@ -8703,7 +8703,7 @@
         "offset_hex": "0x070C74",
         "offset": 461940,
         "english": "!ENGINEER",
-        "portuguese": "!ENGENHEIRO",
+        "portuguese": "!ENGINEER",
         "terminator": 0,
         "references": []
       },
@@ -8711,7 +8711,7 @@
         "offset_hex": "0x070C7E",
         "offset": 461950,
         "english": "!COMMUNICATIONS",
-        "portuguese": "!COMUNICACOES",
+        "portuguese": "!COMMUNICATIONS",
         "terminator": 0,
         "references": []
       },
@@ -8719,7 +8719,7 @@
         "offset_hex": "0x070C8E",
         "offset": 461966,
         "english": "!DOCTO",
-        "portuguese": "!MEDICO",
+        "portuguese": "!DOCTO",
         "terminator": 210,
         "references": []
       },
@@ -8727,7 +8727,7 @@
         "offset_hex": "0x070C95",
         "offset": 461973,
         "english": "A SELECTS C ABORT",
-        "portuguese": "A SELECIONA C ABORT",
+        "portuguese": "A SELECTS C ABORT",
         "terminator": 211,
         "references": [
           "0x002622"
@@ -8737,7 +8737,7 @@
         "offset_hex": "0x070CA7",
         "offset": 461991,
         "english": "!LOG PLANET",
-        "portuguese": "!LOG PLANETA",
+        "portuguese": "!LOG PLANET",
         "terminator": 0,
         "references": []
       },
@@ -8745,7 +8745,7 @@
         "offset_hex": "0x070CB3",
         "offset": 462003,
         "english": "!SENSORS",
-        "portuguese": "!SENSORES",
+        "portuguese": "!SENSORS",
         "terminator": 0,
         "references": []
       },
@@ -8753,7 +8753,7 @@
         "offset_hex": "0x070CBC",
         "offset": 462012,
         "english": "!ANALYSIS",
-        "portuguese": "!ANALISE",
+        "portuguese": "!ANALYSIS",
         "terminator": 0,
         "references": []
       },
@@ -8761,7 +8761,7 @@
         "offset_hex": "0x070CC6",
         "offset": 462022,
         "english": "!ARTIFACT",
-        "portuguese": "!ARTEFATO",
+        "portuguese": "!ARTIFACT",
         "terminator": 211,
         "references": []
       },
@@ -8769,7 +8769,7 @@
         "offset_hex": "0x070CD0",
         "offset": 462032,
         "english": "!LAUNCH",
-        "portuguese": "!LANCAMENTO",
+        "portuguese": "!LAUNCH",
         "terminator": 0,
         "references": []
       },
@@ -8777,7 +8777,7 @@
         "offset_hex": "0x070CD8",
         "offset": 462040,
         "english": "!STARMAP",
-        "portuguese": "!MAPA ESTRELA",
+        "portuguese": "!STARMAP",
         "terminator": 0,
         "references": []
       },
@@ -8785,7 +8785,7 @@
         "offset_hex": "0x070CE1",
         "offset": 462049,
         "english": "!RAISE SHIELDS",
-        "portuguese": "!ELEVAR ESCUDOS",
+        "portuguese": "!RAISE SHIELDS",
         "terminator": 0,
         "references": []
       },
@@ -8793,7 +8793,7 @@
         "offset_hex": "0x070CF0",
         "offset": 462064,
         "english": "!ARM WEAPON",
-        "portuguese": "! ARMA DE ARMA",
+        "portuguese": "!ARM WEAPON",
         "terminator": 211,
         "references": []
       },
@@ -8801,7 +8801,7 @@
         "offset_hex": "0x070CFC",
         "offset": 462076,
         "english": "!CARGO",
-        "portuguese": "!CARGA",
+        "portuguese": "!CARGO",
         "terminator": 0,
         "references": []
       },
@@ -8809,7 +8809,7 @@
         "offset_hex": "0x070D03",
         "offset": 462083,
         "english": "!REPAIR!HAIL",
-        "portuguese": "!REPARO!HAIL",
+        "portuguese": "!REPAIR!HAIL",
         "terminator": 0,
         "references": []
       },
@@ -8832,7 +8832,7 @@
         "offset_hex": "0x070D39",
         "offset": 462137,
         "english": "!MINERAL SCAN",
-        "portuguese": "!VARREDURA MINERAL",
+        "portuguese": "!MINERAL SCAN",
         "terminator": 0,
         "references": [
           "0x00825C"
@@ -8842,7 +8842,7 @@
         "offset_hex": "0x070D4C",
         "offset": 462156,
         "english": "!INVENTORY",
-        "portuguese": "!INVENTARIO",
+        "portuguese": "!INVENTORY",
         "terminator": 0,
         "references": []
       },
@@ -8850,7 +8850,7 @@
         "offset_hex": "0x070D57",
         "offset": 462167,
         "english": "!TREAT",
-        "portuguese": "!TRATAR",
+        "portuguese": "!TREAT",
         "terminator": 0,
         "references": []
       },
@@ -8858,7 +8858,7 @@
         "offset_hex": "0x070D5E",
         "offset": 462174,
         "english": "!EMBAR",
-        "portuguese": "!EMBARC",
+        "portuguese": "!EMBAR",
         "terminator": 203,
         "references": []
       },
@@ -8866,7 +8866,7 @@
         "offset_hex": "0x070D65",
         "offset": 462181,
         "english": "!DISEMBARK",
-        "portuguese": "!DESEMBARQUE",
+        "portuguese": "!DISEMBARK",
         "terminator": 0,
         "references": [
           "0x00822E"
@@ -8876,7 +8876,7 @@
         "offset_hex": "0x070D70",
         "offset": 462192,
         "english": "!DISTRESS!CAL",
-        "portuguese": "!ANGUSTIA!CAL",
+        "portuguese": "!DISTRESS!CAL",
         "terminator": 204,
         "references": []
       },
@@ -8884,7 +8884,7 @@
         "offset_hex": "0x070D7E",
         "offset": 462206,
         "english": "DAMAGE SUFFERED IN CRAS",
-        "portuguese": "DANOS SOFRIDOS NO CRAS",
+        "portuguese": "DAMAGE SUFFERED IN CRAS",
         "terminator": 200,
         "references": []
       }
@@ -8926,7 +8926,7 @@
         "offset_hex": "0x070DDD",
         "offset": 462301,
         "english": "LANDING PARAMETERS",
-        "portuguese": "PARAMETROS DE ATERRAGEM",
+        "portuguese": "LANDING PARAMETERS",
         "terminator": 0,
         "references": []
       },
@@ -8934,7 +8934,7 @@
         "offset_hex": "0x070DF2",
         "offset": 462322,
         "english": "!HORIZ PLANET SIZE",
-        "portuguese": "!TAMANHO DO PLANETA HORIZ",
+        "portuguese": "!HORIZ PLANET SIZE",
         "terminator": 0,
         "references": []
       },
@@ -8942,7 +8942,7 @@
         "offset_hex": "0x070E05",
         "offset": 462341,
         "english": "!VERT PLANET SIZE",
-        "portuguese": "!TAMANHO DO PLANETA VERT",
+        "portuguese": "!VERT PLANET SIZE",
         "terminator": 0,
         "references": []
       },
@@ -8950,7 +8950,7 @@
         "offset_hex": "0x070E17",
         "offset": 462359,
         "english": "!LAND PROBABILITY",
-        "portuguese": "!PROBABILIDADE DE TERRA",
+        "portuguese": "!LAND PROBABILITY",
         "terminator": 0,
         "references": []
       },
@@ -8958,7 +8958,7 @@
         "offset_hex": "0x070E29",
         "offset": 462377,
         "english": "!MODULE",
-        "portuguese": "!MODULO",
+        "portuguese": "!MODULE",
         "terminator": 0,
         "references": []
       },
@@ -8966,7 +8966,7 @@
         "offset_hex": "0x070E37",
         "offset": 462391,
         "english": "!PLANET TYPE",
-        "portuguese": "!TIPO DE PLANETA",
+        "portuguese": "!PLANET TYPE",
         "terminator": 0,
         "references": []
       },
@@ -8974,7 +8974,7 @@
         "offset_hex": "0x070E44",
         "offset": 462404,
         "english": "!STORM TYPE",
-        "portuguese": "!TIPO DE TEMPESTADE",
+        "portuguese": "!STORM TYPE",
         "terminator": 0,
         "references": []
       },
@@ -8982,7 +8982,7 @@
         "offset_hex": "0x070E55",
         "offset": 462421,
         "english": "UP AND DOWN SELECT PARAMETER",
-        "portuguese": "PARA CIMA E PARA BAIXO SELECIONE O PARAMETRO",
+        "portuguese": "UP AND DOWN SELECT PARAMETER",
         "terminator": 0,
         "references": []
       },
@@ -8990,7 +8990,7 @@
         "offset_hex": "0x070E72",
         "offset": 462450,
         "english": "RIGHT AND LEFT MODIFY PARAMETER",
-        "portuguese": "PARAMETRO DE MODIFICACAO DIREITA E ESQUERDA",
+        "portuguese": "RIGHT AND LEFT MODIFY PARAMETER",
         "terminator": 0,
         "references": []
       },
@@ -8998,7 +8998,7 @@
         "offset_hex": "0x070E92",
         "offset": 462482,
         "english": "PRESS ANY BUTTON WHEN DON",
-        "portuguese": "PRESSIONE QUALQUER BOTAO QUANDO NAO",
+        "portuguese": "PRESS ANY BUTTON WHEN DON",
         "terminator": 197,
         "references": []
       },
@@ -9053,7 +9053,7 @@
         "offset_hex": "0x070F1C",
         "offset": 462620,
         "english": "MOLYBDENU",
-        "portuguese": "MOLIBDENU",
+        "portuguese": "MOLYBDENU",
         "terminator": 205,
         "references": []
       },
@@ -9201,7 +9201,7 @@
         "offset_hex": "0x070FAA",
         "offset": 462762,
         "english": "SHIP VOLUME:",
-        "portuguese": "VOLUME DA NAVE:",
+        "portuguese": "SHIP VOLUME:",
         "terminator": 255,
         "references": [
           "0x0088C6",
@@ -9212,7 +9212,7 @@
         "offset_hex": "0x070FB7",
         "offset": 462775,
         "english": "LIFEBOAT!HAS!BEEN!DISPATCHE",
-        "portuguese": "BOTE SALVA-VIDAS!FOI!DEPACHADO",
+        "portuguese": "LIFEBOAT!HAS!BEEN!DISPATCHE",
         "terminator": 196,
         "references": []
       },
@@ -9237,7 +9237,7 @@
         "offset_hex": "0x070FF6",
         "offset": 462838,
         "english": "HUMAN  ",
-        "portuguese": "HUMANO  ",
+        "portuguese": "HUMAN  ",
         "terminator": 255,
         "references": [
           "0x014F7C"
@@ -9271,7 +9271,7 @@
         "offset_hex": "0x071016",
         "offset": 462870,
         "english": "ANDROID",
-        "portuguese": "ANDROIDE",
+        "portuguese": "ANDROID",
         "terminator": 255,
         "references": []
       },
@@ -9279,7 +9279,7 @@
         "offset_hex": "0x07101E",
         "offset": 462878,
         "english": "MAMMALIAN",
-        "portuguese": "MAMIFERO",
+        "portuguese": "MAMMALIAN",
         "terminator": 255,
         "references": [
           "0x014F9A"
@@ -9289,7 +9289,7 @@
         "offset_hex": "0x071028",
         "offset": 462888,
         "english": "INSECTOID",
-        "portuguese": "INSECTOIDE",
+        "portuguese": "INSECTOID",
         "terminator": 255,
         "references": []
       },
@@ -9297,7 +9297,7 @@
         "offset_hex": "0x071032",
         "offset": 462898,
         "english": "REPTILIAN",
-        "portuguese": "REPTILIANO",
+        "portuguese": "REPTILIAN",
         "terminator": 255,
         "references": []
       },
@@ -9305,7 +9305,7 @@
         "offset_hex": "0x07103C",
         "offset": 462908,
         "english": "PLANT    ",
-        "portuguese": "PLANTA    ",
+        "portuguese": "PLANT    ",
         "terminator": 255,
         "references": []
       },
@@ -9313,7 +9313,7 @@
         "offset_hex": "0x071046",
         "offset": 462918,
         "english": "SYNTHETIC",
-        "portuguese": "SINTETICO",
+        "portuguese": "SYNTHETIC",
         "terminator": 255,
         "references": []
       }
@@ -9328,7 +9328,7 @@
         "offset_hex": "0x0710A6",
         "offset": 463014,
         "english": "NONE   ",
-        "portuguese": "NENHUM   ",
+        "portuguese": "NONE   ",
         "terminator": 255,
         "references": [
           "0x015760"
@@ -9338,7 +9338,7 @@
         "offset_hex": "0x0710B4",
         "offset": 463028,
         "english": "THIS STRING TESTS IF THE NEW WRITEMESSAGE FUNCTION WORKS PROPERLY OR NOT.  THIS MESSAGE SHOULD APPEAR CORRECTLY IN A WINDOW WHEN THE START BUTTON IS PRESSED PLANETSIDE. WHEN THE WINDOW IS FULL, THE USER PRESSES THE A BUTTON AND MORE OF THE MESSAGE SHOULD APPEAR.  THIS IS TO BE USED FOR ANYWHERE THAT A MESSAGE COULD RUN LONGER THAN A WINDOW, FOR EXAMPLE IN THE ALIEN COMMUNICATIONS SECTION, WHERE ALIEN MESSAGES COULD BE SEVERAL WINDOWS LONG.  SPECIAL CHARACTERS THAT ARE ALLOWED ARE:  LOWER CASE R STANDS FOR RETURN, SO YOU CAN BREAK A LINE IN THE MIDDLErSMALL C IS c, SMALL T IS t, SMALL I IS i.rPUNCTUATION STANDARD ASCII:  !+=-:?%#.,rANY ILLEGAL VALUE SHOWS UP AS A c.",
-        "portuguese": "ESTA STRING TESTA SE A NOVA FUNCAO WRITEMESSAGE FUNCIONA CORRETAMENTE OU NAO.  ESTA MENSAGEM DEVE APARECER CORRETAMENTE EM UMA JANELA QUANDO O BOTAO INICIAR FOR PRESSIONADO NO LADO DO PLANETA. QUANDO A JANELA ESTA CHEIA, O USUARIO APERTA O BOTAO A E MAIS DA MENSAGEM DEVE APARECER.  ISTO DEVE SER USADO EM QUALQUER LUGAR EM QUE UMA MENSAGEM PODE SER EXECUTADA POR MAIS TEMPO DO QUE UMA JANELA, POR EXEMPLO NA SECAO DE COMUNICACOES ALIENIGENAS, ONDE AS MENSAGENS ALIENIGENAS PODEM TER VARIAS JANELAS.  PERSONAGENS ESPECIAIS PERMITIDOS SAO: R MINUSCULO REFERE RETORNO, ASSIM VOCE PODE QUEBRAR UMA LINHA NO MEIOrC PEQUENO E c, PEQUENO T E t, PEQUENO EU SOU i.rPADRAO DE PONTUACAO ASCII: !+=-:?%#.,rQUALQUER VALOR ILEGAL APARECE COMO UM c.",
+        "portuguese": "THIS STRING TESTS IF THE NEW WRITEMESSAGE FUNCTION WORKS PROPERLY OR NOT.  THIS MESSAGE SHOULD APPEAR CORRECTLY IN A WINDOW WHEN THE START BUTTON IS PRESSED PLANETSIDE. WHEN THE WINDOW IS FULL, THE USER PRESSES THE A BUTTON AND MORE OF THE MESSAGE SHOULD APPEAR.  THIS IS TO BE USED FOR ANYWHERE THAT A MESSAGE COULD RUN LONGER THAN A WINDOW, FOR EXAMPLE IN THE ALIEN COMMUNICATIONS SECTION, WHERE ALIEN MESSAGES COULD BE SEVERAL WINDOWS LONG.  SPECIAL CHARACTERS THAT ARE ALLOWED ARE:  LOWER CASE R STANDS FOR RETURN, SO YOU CAN BREAK A LINE IN THE MIDDLErSMALL C IS c, SMALL T IS t, SMALL I IS i.rPUNCTUATION STANDARD ASCII:  !+=-:?%#.,rANY ILLEGAL VALUE SHOWS UP AS A c.",
         "terminator": 255,
         "references": []
       }
@@ -9370,7 +9370,7 @@
         "offset_hex": "0x07623F",
         "offset": 483903,
         "english": "!SCIENCE!OFFICER",
-        "portuguese": "!CIENCIA!OFICIAL",
+        "portuguese": "!SCIENCE!OFFICER",
         "terminator": 0,
         "references": [
           "0x00C8F8"
@@ -9380,7 +9380,7 @@
         "offset_hex": "0x076250",
         "offset": 483920,
         "english": "!NAVIGATOR",
-        "portuguese": "!NAVEGADOR",
+        "portuguese": "!NAVIGATOR",
         "terminator": 0,
         "references": []
       },
@@ -9388,7 +9388,7 @@
         "offset_hex": "0x07625B",
         "offset": 483931,
         "english": "!ENGINEER",
-        "portuguese": "!ENGENHEIRO",
+        "portuguese": "!ENGINEER",
         "terminator": 0,
         "references": []
       },
@@ -9396,7 +9396,7 @@
         "offset_hex": "0x076265",
         "offset": 483941,
         "english": "!COMMUNICATIONS",
-        "portuguese": "!COMUNICACOES",
+        "portuguese": "!COMMUNICATIONS",
         "terminator": 0,
         "references": []
       },
@@ -9404,7 +9404,7 @@
         "offset_hex": "0x076275",
         "offset": 483957,
         "english": "!DOCTO",
-        "portuguese": "!MEDICO",
+        "portuguese": "!DOCTO",
         "terminator": 210,
         "references": []
       },
@@ -9412,7 +9412,7 @@
         "offset_hex": "0x07627C",
         "offset": 483964,
         "english": "!SENSORS",
-        "portuguese": "!SENSORES",
+        "portuguese": "!SENSORS",
         "terminator": 0,
         "references": [
           "0x00CA9C"
@@ -9422,7 +9422,7 @@
         "offset_hex": "0x076285",
         "offset": 483973,
         "english": "!ANALYSIS",
-        "portuguese": "!ANALISE",
+        "portuguese": "!ANALYSIS",
         "terminator": 0,
         "references": []
       },
@@ -9430,7 +9430,7 @@
         "offset_hex": "0x07628F",
         "offset": 483983,
         "english": "!ARTIFACTS",
-        "portuguese": "!ARTEFATOS",
+        "portuguese": "!ARTIFACTS",
         "terminator": 0,
         "references": []
       },
@@ -9438,7 +9438,7 @@
         "offset_hex": "0x07629A",
         "offset": 483994,
         "english": "!LOG!PLANE",
-        "portuguese": "!LOG!AVIAO",
+        "portuguese": "!LOG!PLANE",
         "terminator": 212,
         "references": []
       },
@@ -9446,7 +9446,7 @@
         "offset_hex": "0x0762AB",
         "offset": 484011,
         "english": "!STARMA",
-        "portuguese": "!MAPA",
+        "portuguese": "!STARMA",
         "terminator": 208,
         "references": []
       },
@@ -9494,7 +9494,7 @@
         "offset_hex": "0x0762EA",
         "offset": 484074,
         "english": "!CARGO",
-        "portuguese": "!CARGA",
+        "portuguese": "!CARGO",
         "terminator": 0,
         "references": [
           "0x00CEE8"
@@ -9504,7 +9504,7 @@
         "offset_hex": "0x0762F1",
         "offset": 484081,
         "english": "!REPAI",
-        "portuguese": "!REPAR",
+        "portuguese": "!REPAI",
         "terminator": 210,
         "references": []
       },
@@ -9512,7 +9512,7 @@
         "offset_hex": "0x0762FE",
         "offset": 484094,
         "english": "!DISTRES",
-        "portuguese": "!ANGUSTI",
+        "portuguese": "!DISTRES",
         "terminator": 211,
         "references": []
       },
@@ -9520,7 +9520,7 @@
         "offset_hex": "0x076307",
         "offset": 484103,
         "english": "!RESPOND",
-        "portuguese": "!RESPONDER",
+        "portuguese": "!RESPOND",
         "terminator": 0,
         "references": [
           "0x00CF42"
@@ -9530,7 +9530,7 @@
         "offset_hex": "0x076310",
         "offset": 484112,
         "english": "!DISTRES",
-        "portuguese": "!ANGUSTI",
+        "portuguese": "!DISTRES",
         "terminator": 211,
         "references": []
       },
@@ -9538,7 +9538,7 @@
         "offset_hex": "0x07631F",
         "offset": 484127,
         "english": "!!!!ORBIT",
-        "portuguese": "!!!!ORBITA",
+        "portuguese": "!!!!ORBIT",
         "terminator": 0,
         "references": [
           "0x00E732",
@@ -9551,7 +9551,7 @@
         "offset_hex": "0x076329",
         "offset": 484137,
         "english": "!ESTABLISHE",
-        "portuguese": "!ESTABELECER",
+        "portuguese": "!ESTABLISHE",
         "terminator": 196,
         "references": []
       },
@@ -9559,7 +9559,7 @@
         "offset_hex": "0x076336",
         "offset": 484150,
         "english": "ATMOSPHERE",
-        "portuguese": "ATMOSFERA",
+        "portuguese": "ATMOSPHERE",
         "terminator": 0,
         "references": []
       },
@@ -9567,7 +9567,7 @@
         "offset_hex": "0x076342",
         "offset": 484162,
         "english": "HYDROSPHERE",
-        "portuguese": "HIDROSFERA",
+        "portuguese": "HYDROSPHERE",
         "terminator": 0,
         "references": []
       },
@@ -9575,7 +9575,7 @@
         "offset_hex": "0x07634F",
         "offset": 484175,
         "english": "LITHOSPHER",
-        "portuguese": "LITOSFERA",
+        "portuguese": "LITHOSPHER",
         "terminator": 197,
         "references": []
       },
@@ -9614,7 +9614,7 @@
         "offset_hex": "0x076387",
         "offset": 484231,
         "english": "!!!!ANALYSIS!OF!LAST!READING",
-        "portuguese": "!!!!ANALISE!DA!ULTIMA!LEITURA",
+        "portuguese": "!!!!ANALYSIS!OF!LAST!READING",
         "terminator": 0,
         "references": [
           "0x00F2C6"
@@ -9624,7 +9624,7 @@
         "offset_hex": "0x0763A5",
         "offset": 484261,
         "english": "OBJECT!!!!!!!!!!!ORBIT NUMBER",
-        "portuguese": "OBJETO!!!!!!!!!!!!NUMERO DA ORBITA",
+        "portuguese": "OBJECT!!!!!!!!!!!ORBIT NUMBER",
         "terminator": 0,
         "references": []
       },
@@ -9632,7 +9632,7 @@
         "offset_hex": "0x0763C3",
         "offset": 484291,
         "english": "PREDOMINANT!SURFACE",
-        "portuguese": "SUPERFICIE PREDOMINANTE",
+        "portuguese": "PREDOMINANT!SURFACE",
         "terminator": 0,
         "references": []
       },
@@ -9640,7 +9640,7 @@
         "offset_hex": "0x0763D7",
         "offset": 484311,
         "english": "GRAVITY",
-        "portuguese": "GRAVIDADE",
+        "portuguese": "GRAVITY",
         "terminator": 0,
         "references": []
       },
@@ -9648,7 +9648,7 @@
         "offset_hex": "0x0763DF",
         "offset": 484319,
         "english": "ATMOSPHERIC!DENSITY",
-        "portuguese": "DENSIDADE ATMOSFERICA",
+        "portuguese": "ATMOSPHERIC!DENSITY",
         "terminator": 0,
         "references": []
       },
@@ -9656,7 +9656,7 @@
         "offset_hex": "0x0763F3",
         "offset": 484339,
         "english": "TEMPERATURE",
-        "portuguese": "TEMPERATURA",
+        "portuguese": "TEMPERATURE",
         "terminator": 0,
         "references": []
       },
@@ -9664,7 +9664,7 @@
         "offset_hex": "0x076400",
         "offset": 484352,
         "english": "GLOBAL!WEATHE",
-        "portuguese": "GLOBAL!TEMPO",
+        "portuguese": "GLOBAL!WEATHE",
         "terminator": 210,
         "references": []
       },
@@ -9712,7 +9712,7 @@
         "offset_hex": "0x07644D",
         "offset": 484429,
         "english": ": ROCK.",
-        "portuguese": ": ROCHA.",
+        "portuguese": ": ROCK.",
         "terminator": 255,
         "references": [
           "0x00F45C"
@@ -9722,7 +9722,7 @@
         "offset_hex": "0x076455",
         "offset": 484437,
         "english": ": WATER.",
-        "portuguese": ": AGUA.",
+        "portuguese": ": WATER.",
         "terminator": 255,
         "references": []
       },
@@ -9750,7 +9750,7 @@
         "offset_hex": "0x076472",
         "offset": 484466,
         "english": "!SENSOR!READING",
-        "portuguese": "!SENSOR!LEITURA",
+        "portuguese": "!SENSOR!READING",
         "terminator": 0,
         "references": [
           "0x00F1F8",
@@ -9762,7 +9762,7 @@
         "offset_hex": "0x076482",
         "offset": 484482,
         "english": "!!!!!NEEDE",
-        "portuguese": "!!!!!NECESSIDADE",
+        "portuguese": "!!!!!NEEDE",
         "terminator": 196,
         "references": []
       },
@@ -9770,7 +9770,7 @@
         "offset_hex": "0x07648D",
         "offset": 484493,
         "english": "!BLACK!BOX",
-        "portuguese": "!PRETO!CAIXA",
+        "portuguese": "!BLACK!BOX",
         "terminator": 0,
         "references": []
       },
@@ -9778,7 +9778,7 @@
         "offset_hex": "0x076498",
         "offset": 484504,
         "english": "!CRYSTAL!CONE",
-        "portuguese": "!CRISTAL!CONE",
+        "portuguese": "!CRYSTAL!CONE",
         "terminator": 0,
         "references": []
       },
@@ -9786,7 +9786,7 @@
         "offset_hex": "0x0764A6",
         "offset": 484518,
         "english": "!CRYSTAL!ORB",
-        "portuguese": "!CRISTAL!ORB",
+        "portuguese": "!CRYSTAL!ORB",
         "terminator": 0,
         "references": []
       },
@@ -9794,7 +9794,7 @@
         "offset_hex": "0x0764B3",
         "offset": 484531,
         "english": "!ELLIPSOID",
-        "portuguese": "!ELIPSOIDE",
+        "portuguese": "!ELLIPSOID",
         "terminator": 0,
         "references": []
       },
@@ -9802,7 +9802,7 @@
         "offset_hex": "0x0764BE",
         "offset": 484542,
         "english": "!BLACK!EGG",
-        "portuguese": "!PRETO!OVO",
+        "portuguese": "!BLACK!EGG",
         "terminator": 0,
         "references": []
       },
@@ -9810,7 +9810,7 @@
         "offset_hex": "0x0764C9",
         "offset": 484553,
         "english": "!BLACK!EGG",
-        "portuguese": "!PRETO!OVO",
+        "portuguese": "!BLACK!EGG",
         "terminator": 0,
         "references": []
       },
@@ -9818,7 +9818,7 @@
         "offset_hex": "0x0764D4",
         "offset": 484564,
         "english": "!BLACK!EGG",
-        "portuguese": "!PRETO!OVO",
+        "portuguese": "!BLACK!EGG",
         "terminator": 0,
         "references": []
       },
@@ -9826,7 +9826,7 @@
         "offset_hex": "0x0764DF",
         "offset": 484575,
         "english": "!DODECAHEDRON",
-        "portuguese": "!DODECAEDRO",
+        "portuguese": "!DODECAHEDRON",
         "terminator": 0,
         "references": []
       },
@@ -9834,7 +9834,7 @@
         "offset_hex": "0x0764ED",
         "offset": 484589,
         "english": "!ROD!DEVICE",
-        "portuguese": "!HASTE!DISPOSITIVO",
+        "portuguese": "!ROD!DEVICE",
         "terminator": 0,
         "references": []
       },
@@ -9842,7 +9842,7 @@
         "offset_hex": "0x0764F9",
         "offset": 484601,
         "english": "!RED!CYLINDER",
-        "portuguese": "!VERMELHO!CILINDRO",
+        "portuguese": "!RED!CYLINDER",
         "terminator": 0,
         "references": []
       },
@@ -9850,7 +9850,7 @@
         "offset_hex": "0x076507",
         "offset": 484615,
         "english": "!TESSERACT",
-        "portuguese": "!TESSERACTO",
+        "portuguese": "!TESSERACT",
         "terminator": 0,
         "references": []
       },
@@ -9858,7 +9858,7 @@
         "offset_hex": "0x076512",
         "offset": 484626,
         "english": "!WHINING!ORB",
-        "portuguese": "!CHOMENTANDO!ORB",
+        "portuguese": "!WHINING!ORB",
         "terminator": 0,
         "references": []
       },
@@ -9866,7 +9866,7 @@
         "offset_hex": "0x07651F",
         "offset": 484639,
         "english": "!SHIMMERING!ORB",
-        "portuguese": "!BRILHANTE!ORB",
+        "portuguese": "!SHIMMERING!ORB",
         "terminator": 0,
         "references": []
       },
@@ -9874,7 +9874,7 @@
         "offset_hex": "0x07652F",
         "offset": 484655,
         "english": "!FLAT!DEVICE",
-        "portuguese": "!PISO!DISPOSITIVO",
+        "portuguese": "!FLAT!DEVICE",
         "terminator": 0,
         "references": []
       },
@@ -9882,7 +9882,7 @@
         "offset_hex": "0x07653C",
         "offset": 484668,
         "english": "!RING!DEVICE",
-        "portuguese": "!ANEL!DISPOSITIVO",
+        "portuguese": "!RING!DEVICE",
         "terminator": 0,
         "references": []
       },
@@ -9890,7 +9890,7 @@
         "offset_hex": "0x076549",
         "offset": 484681,
         "english": "!HYPERCUBE",
-        "portuguese": "!HIPERCUBO",
+        "portuguese": "!HYPERCUBE",
         "terminator": 0,
         "references": []
       },
@@ -9898,7 +9898,7 @@
         "offset_hex": "0x076554",
         "offset": 484692,
         "english": "!CRYSTAL!PEAR",
-        "portuguese": "!CRISTAL!PERA",
+        "portuguese": "!CRYSTAL!PEAR",
         "terminator": 204,
         "references": []
       },
@@ -10064,7 +10064,7 @@
         "offset_hex": "0x07673D",
         "offset": 485181,
         "english": "CHARGES",
-        "portuguese": "TAXAS",
+        "portuguese": "CHARGES",
         "terminator": 0,
         "references": []
       },
@@ -10072,7 +10072,7 @@
         "offset_hex": "0x07674D",
         "offset": 485197,
         "english": "LOCATES",
-        "portuguese": "LOCALIZA",
+        "portuguese": "LOCATES",
         "terminator": 0,
         "references": []
       },
@@ -10080,7 +10080,7 @@
         "offset_hex": "0x076755",
         "offset": 485205,
         "english": "ARTIFACTS",
-        "portuguese": "ARTEFATOS",
+        "portuguese": "ARTIFACTS",
         "terminator": 0,
         "references": []
       },
@@ -10088,7 +10088,7 @@
         "offset_hex": "0x07675F",
         "offset": 485215,
         "english": "ON PLANE",
-        "portuguese": "NO AVIAO",
+        "portuguese": "ON PLANE",
         "terminator": 212,
         "references": []
       },
@@ -10096,7 +10096,7 @@
         "offset_hex": "0x07676A",
         "offset": 485226,
         "english": "INCREASES",
-        "portuguese": "AUMENTA",
+        "portuguese": "INCREASES",
         "terminator": 0,
         "references": []
       },
@@ -10104,7 +10104,7 @@
         "offset_hex": "0x076779",
         "offset": 485241,
         "english": "EFFICIENC",
-        "portuguese": "EFICIENCIA",
+        "portuguese": "EFFICIENC",
         "terminator": 217,
         "references": []
       },
@@ -10112,7 +10112,7 @@
         "offset_hex": "0x07678B",
         "offset": 485259,
         "english": "SPEMIN",
-        "portuguese": "ESPEMINA",
+        "portuguese": "SPEMIN",
         "terminator": 0,
         "references": []
       },
@@ -10128,7 +10128,7 @@
         "offset_hex": "0x07679E",
         "offset": 485278,
         "english": "AUTOSCAN",
-        "portuguese": "VERIFICACAO AUTOMATICA",
+        "portuguese": "AUTOSCAN",
         "terminator": 0,
         "references": []
       },
@@ -10136,7 +10136,7 @@
         "offset_hex": "0x0767AF",
         "offset": 485295,
         "english": "TELEPORTS",
-        "portuguese": "TELEPORTES",
+        "portuguese": "TELEPORTS",
         "terminator": 0,
         "references": []
       },
@@ -10144,7 +10144,7 @@
         "offset_hex": "0x0767B9",
         "offset": 485305,
         "english": "TV!BACK",
-        "portuguese": "TV!VOLTAR",
+        "portuguese": "TV!BACK",
         "terminator": 0,
         "references": []
       },
@@ -10152,7 +10152,7 @@
         "offset_hex": "0x0767C1",
         "offset": 485313,
         "english": "TO!SHI",
-        "portuguese": "PARA!SHI",
+        "portuguese": "TO!SHI",
         "terminator": 208,
         "references": []
       },
@@ -10160,7 +10160,7 @@
         "offset_hex": "0x0767D0",
         "offset": 485328,
         "english": "NEARBY",
-        "portuguese": "PERTO",
+        "portuguese": "NEARBY",
         "terminator": 0,
         "references": []
       },
@@ -10168,7 +10168,7 @@
         "offset_hex": "0x0767D7",
         "offset": 485335,
         "english": "FLUXES",
-        "portuguese": "FLUXOS",
+        "portuguese": "FLUXES",
         "terminator": 0,
         "references": []
       },
@@ -10176,7 +10176,7 @@
         "offset_hex": "0x0767E1",
         "offset": 485345,
         "english": "STARMA",
-        "portuguese": "ESTRELA",
+        "portuguese": "STARMA",
         "terminator": 208,
         "references": []
       },
@@ -10184,7 +10184,7 @@
         "offset_hex": "0x0767F0",
         "offset": 485360,
         "english": "NEARBY",
-        "portuguese": "PERTO",
+        "portuguese": "NEARBY",
         "terminator": 0,
         "references": []
       },
@@ -10192,7 +10192,7 @@
         "offset_hex": "0x0767F7",
         "offset": 485367,
         "english": "ENCOUNTERS",
-        "portuguese": "ENCONTROS",
+        "portuguese": "ENCOUNTERS",
         "terminator": 0,
         "references": []
       },
@@ -10200,7 +10200,7 @@
         "offset_hex": "0x076805",
         "offset": 485381,
         "english": "STARMA",
-        "portuguese": "ESTRELA",
+        "portuguese": "STARMA",
         "terminator": 208,
         "references": []
       },
@@ -10208,7 +10208,7 @@
         "offset_hex": "0x07680E",
         "offset": 485390,
         "english": "TELEPORTS",
-        "portuguese": "TELEPORTES",
+        "portuguese": "TELEPORTS",
         "terminator": 0,
         "references": []
       },
@@ -10216,7 +10216,7 @@
         "offset_hex": "0x076818",
         "offset": 485400,
         "english": "YOU!WHEN",
-        "portuguese": "VOCE! QUANDO",
+        "portuguese": "YOU!WHEN",
         "terminator": 0,
         "references": []
       },
@@ -10224,7 +10224,7 @@
         "offset_hex": "0x076821",
         "offset": 485409,
         "english": "YOU ARE IN",
-        "portuguese": "VOCE ESTA DENTRO",
+        "portuguese": "YOU ARE IN",
         "terminator": 0,
         "references": []
       },
@@ -10232,7 +10232,7 @@
         "offset_hex": "0x07682C",
         "offset": 485420,
         "english": "TROUBL",
-        "portuguese": "PROBLEMA",
+        "portuguese": "TROUBL",
         "terminator": 197,
         "references": []
       },
@@ -10250,7 +10250,7 @@
         "offset_hex": "0x07683D",
         "offset": 485437,
         "english": "LEAVE!ENCOUNTER",
-        "portuguese": "SAIA! ENCONTRO",
+        "portuguese": "LEAVE!ENCOUNTER",
         "terminator": 0,
         "references": [
           "0x0120BA"
@@ -10260,7 +10260,7 @@
         "offset_hex": "0x07684D",
         "offset": 485453,
         "english": "B!YES!!!C!N",
-        "portuguese": "B!SIM!!!C!N",
+        "portuguese": "B!YES!!!C!N",
         "terminator": 207,
         "references": []
       },
@@ -10515,7 +10515,7 @@
         "offset_hex": "0x07AB6E",
         "offset": 502638,
         "english": "TO COMPLETE REPAIRS.",
-        "portuguese": "PARA CONCLUIR REPAROS.",
+        "portuguese": "TO COMPLETE REPAIRS.",
         "terminator": 255,
         "references": []
       },
@@ -10523,7 +10523,7 @@
         "offset_hex": "0x07AB86",
         "offset": 502662,
         "english": "INSUFFICIENT FUEL TO",
-        "portuguese": "COMBUSTIVEL INSUFICIENTE PARA",
+        "portuguese": "INSUFFICIENT FUEL TO",
         "terminator": 255,
         "references": []
       },
@@ -10531,7 +10531,7 @@
         "offset_hex": "0x07AB9D",
         "offset": 502685,
         "english": "CONDUCT A MINERAL SCAN",
-        "portuguese": "FACA UMA VERIFICACAO MINERAL",
+        "portuguese": "CONDUCT A MINERAL SCAN",
         "terminator": 255,
         "references": []
       },
@@ -10539,7 +10539,7 @@
         "offset_hex": "0x07ABB7",
         "offset": 502711,
         "english": "MESSAGE DIRECTORY",
-        "portuguese": "DIRETORIO DE MENSAGENS",
+        "portuguese": "MESSAGE DIRECTORY",
         "terminator": 255,
         "references": []
       },
@@ -10547,7 +10547,7 @@
         "offset_hex": "0x07ABCC",
         "offset": 502732,
         "english": "CARGO    A: DROP ITEM",
-        "portuguese": "CARGA A: DEIXAR ITEM",
+        "portuguese": "CARGO    A: DROP ITEM",
         "terminator": 255,
         "references": []
       },
@@ -10555,7 +10555,7 @@
         "offset_hex": "0x07ABE5",
         "offset": 502757,
         "english": "ESTIMATED TIME TO SYSTEM",
-        "portuguese": "TEMPO ESTIMADO PARA SISTEMA",
+        "portuguese": "ESTIMATED TIME TO SYSTEM",
         "terminator": 255,
         "references": []
       },
@@ -10563,7 +10563,7 @@
         "offset_hex": "0x07AC00",
         "offset": 502784,
         "english": "FLARE:     DAYS",
-        "portuguese": "FLARE: DIAS",
+        "portuguese": "FLARE:     DAYS",
         "terminator": 255,
         "references": []
       },
@@ -10571,7 +10571,7 @@
         "offset_hex": "0x07AC13",
         "offset": 502803,
         "english": "SYSTEM HAS FLARED.",
-        "portuguese": "O SISTEMA FOI QUEIMADO.",
+        "portuguese": "SYSTEM HAS FLARED.",
         "terminator": 255,
         "references": []
       },
@@ -10579,7 +10579,7 @@
         "offset_hex": "0x07AC29",
         "offset": 502825,
         "english": "GAME SAVED.",
-        "portuguese": "JOGO SALVO.",
+        "portuguese": "GAME SAVED.",
         "terminator": 255,
         "references": []
       },
@@ -10587,7 +10587,7 @@
         "offset_hex": "0x07AC38",
         "offset": 502840,
         "english": "GAME SAVED.",
-        "portuguese": "JOGO SALVO.",
+        "portuguese": "GAME SAVED.",
         "terminator": 255,
         "references": []
       },
@@ -10595,7 +10595,7 @@
         "offset_hex": "0x07AC47",
         "offset": 502855,
         "english": "A:OVERWRITE SAVED GAME",
-        "portuguese": "A: SUBSTITUIR JOGO SALVO",
+        "portuguese": "A:OVERWRITE SAVED GAME",
         "terminator": 255,
         "references": []
       },
@@ -10603,7 +10603,7 @@
         "offset_hex": "0x07AC60",
         "offset": 502880,
         "english": "C:CANCEL",
-        "portuguese": "C:CANCELAR",
+        "portuguese": "C:CANCEL",
         "terminator": 255,
         "references": []
       },
@@ -10611,7 +10611,7 @@
         "offset_hex": "0x07AC6C",
         "offset": 502892,
         "english": "YOU MAY NOT ATTEMPT A LANDING",
-        "portuguese": "VOCE NAO PODE TENTAR UM POUSO",
+        "portuguese": "YOU MAY NOT ATTEMPT A LANDING",
         "terminator": 255,
         "references": []
       },
@@ -10619,7 +10619,7 @@
         "offset_hex": "0x07AC8C",
         "offset": 502924,
         "english": "ON A STAR.",
-        "portuguese": "EM UMA ESTRELA.",
+        "portuguese": "ON A STAR.",
         "terminator": 255,
         "references": []
       },
@@ -10627,7 +10627,7 @@
         "offset_hex": "0x07AC9A",
         "offset": 502938,
         "english": "ENGINES HAVE",
-        "portuguese": "OS MOTORES TEM",
+        "portuguese": "ENGINES HAVE",
         "terminator": 255,
         "references": []
       },
@@ -10635,7 +10635,7 @@
         "offset_hex": "0x07ACA9",
         "offset": 502953,
         "english": "MALFUNCTIONED.",
-        "portuguese": "MAU FUNCIONADO.",
+        "portuguese": "MALFUNCTIONED.",
         "terminator": 255,
         "references": []
       },
@@ -10643,7 +10643,7 @@
         "offset_hex": "0x07ACBA",
         "offset": 502970,
         "english": "WE CANNOT LAND.",
-        "portuguese": "NAO PODEMOS ATERRAR.",
+        "portuguese": "WE CANNOT LAND.",
         "terminator": 255,
         "references": []
       },
@@ -10856,7 +10856,7 @@
         "offset_hex": "0x0B5AB5",
         "offset": 744117,
         "english": "333333333333333333333333333333333333333s333333S33333333333333333333333333333333333333333333333333333333333C33333333333933333333333333333333?3333333333333?33333333333333333",
-        "portuguese": "333333333333333333333333333333333333333s333333S3333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333 3C33333333333933333333333333333333?333333333333333333333333333333",
+        "portuguese": "333333333333333333333333333333333333333s333333S33333333333333333333333333333333333333333333333333333333333C33333333333933333333333333333333?3333333333333?33333333333333333",
         "terminator": 211,
         "references": []
       },
