@@ -202,14 +202,61 @@ c) ~76 ITENS AINDA "NAO TRADUZIDOS" (portugues == ingles)
    universal (formulas quimicas, sequencias binarias), ou os itens do item
    (b) acima que nao devem ser traduzidos mesmo.
 
-d) TEXTOS QUE O EXTRATOR NAO ENCONTROU
+d) TEXTOS QUE O EXTRATOR NAO ENCONTROU - UM SEGUNDO SISTEMA DE TEXTO INTEIRO
+   (DESCOBERTA IMPORTANTE, INVESTIGACAO FUTURA)
+
    Algumas telas de interface usam um jeito diferente de referenciar o
    texto (nao um ponteiro de 4 bytes convencional), que o extractor.py nao
-   reconhece. Exemplo confirmado: a tela de "ENTER CAPTAIN'S NAME" (digitar
-   o nome do capitao) e os rotulos "A: SELECT LETTER" / "B: DONE" continuam
-   em ingles porque esse texto especifico nunca entrou no
-   texts_to_translate.json. Corrigir isso exigiria mapear manualmente esse
-   mecanismo de referencia alternativo.
+   reconhece. O que comecou como um caso isolado (a tela de "ENTER
+   CAPTAIN'S NAME") acabou revelando ser um SEGUNDO SISTEMA DE TEXTO
+   PARALELO inteiro, usado por varias telas do jogo, que o extractor.py
+   nunca tocou.
+
+   O QUE JA SE SABE:
+   - Esse sistema usa um formato compacto: cada "linha" de texto termina
+     em 0xFF, seguida por um par de bytes de controle (ex: ")\x8c",
+     "*\x0c", "+\x0c") antes da proxima linha. O fim de uma mensagem
+     completa (podendo ter 1-3 linhas) e marcado por 0xFF 0xFF (dois
+     bytes 0xFF seguidos).
+   - Confirmado que cobre pelo menos estas telas: "ENTER CAPTAIN'S NAME" /
+     "A: SELECT LETTER" / "B: DONE" (digitar nome do capitao), mensagens de
+     status/radio ("THERE IS NO ONE HERE TO HAIL.", "YOU HAVE BEEN RESCUED
+     BY A LIFEBOAT...", avisos de sensor/scan), a tela de comercio/loja
+     ("SELECT TRANSACTION", "CARGO PODS:", "ENGINES:", etc.) e a tela de
+     estatisticas da tripulacao ("SKILLS:", "SCIENCE", "NAVIGATION", etc.).
+   - Tamanho: só na regiao 0x079A50-0x07AA80 (uns 6KB) ja foram contadas
+     93 mensagens e ~4600 caracteres de texto legivel - uma quantidade
+     significativa, comparavel a uma fracao substancial do que ja foi
+     traduzido. Bem provavel que existam mais trechos assim em outras
+     partes da ROM que nao chegaram a ser mapeados.
+   - O extractor.py NAO encontra nenhuma referencia (nem Criterio A -
+     opcode de codigo, nem Criterio B - tabela de ponteiros adjacentes)
+     pra nenhuma dessas strings, em nenhuma tentativa. Isso indica que o
+     mecanismo de acesso e bem diferente do sistema principal - o mais
+     provavel e que o jogo acesse essas mensagens por um "ID de mensagem"
+     (um numero pequeno) que e convertido em endereco de alguma forma
+     ainda nao identificada: pode ser uma tabela compacta de offsets de
+     16 bits (2 bytes) em vez dos ponteiros de 32 bits que o extractor
+     procura, ou pode ser via contagem sequencial de marcadores 0xFF 0xFF
+     a partir de uma base fixa (parecido com o problema dos grupos
+     "ancora + orfaos" da secao 4-A, so que numa escala bem maior).
+
+   RISCO A CONSIDERAR ANTES DE TENTAR TRADUZIR ISSO: dado o padrao ja visto
+   no resto do projeto, e bem possivel que esse sistema TAMBEM dependa de
+   deslocamentos fixos calculados a partir do tamanho original em ingles
+   (igual a secao 4-A) - o que significaria que, mesmo depois de decifrar
+   o mecanismo de referencia, as traducoes desse bloco especifico
+   poderiam precisar ficar limitadas ao mesmo tamanho em bytes do texto
+   original (sem poder alongar livremente) pra nao corromper graficos de
+   novo.
+
+   PROXIMO PASSO SUGERIDO PRA QUEM RETOMAR ISSO: usar o BlastEm com a flag
+   -d (debugger) ou o dis.exe (disassembler estatico, ambos inclusos no
+   blastem-win32-0.6.2) pra achar a rotina de codigo que desenha a tela
+   "ENTER CAPTAIN'S NAME" (ela e acionada logo no inicio do jogo, no menu
+   de novo jogo, o que facilita achar o ponto de entrada) e rastrear como
+   ela calcula o endereco do texto - isso deve revelar o mecanismo geral
+   usado por todo esse sistema paralelo.
 
 e) TAMANHO DO TEXTO E LAYOUT DE TELA
    Como a traducao em portugues quase sempre e mais longa que o ingles, e
