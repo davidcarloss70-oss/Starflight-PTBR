@@ -245,7 +245,7 @@
         "offset_hex": "0x00CE70",
         "offset": 52848,
         "english": "THE DODECAHEDRON IS GLOWING.",
-        "portuguese": "O DODECAEDRO ESTA BRILHANDO.",
+        "portuguese": "O DODECAHEDRON ESTA BRILHANDO.",
         "terminator": 255,
         "references": [
           "0x00CDFC"
@@ -256,7 +256,7 @@
         "offset_hex": "0x00CE8D",
         "offset": 52877,
         "english": "WEAPONS AREN\\T RESPONDING, SIR.",
-        "portuguese": "NuO DODECAEDRO ESTA BRILHANDO.",
+        "portuguese": "AS ARMAS NAO ESTAO RESPONDENDO, SENHOR.",
         "terminator": 255,
         "references": [
           "0x00CE0C"
@@ -267,7 +267,7 @@
         "offset_hex": "0x00CEAD",
         "offset": 52909,
         "english": "WE HAVE NO SHIELDS, SIR.",
-        "portuguese": "NuO DODECAEDRO ESTA BRILHANDO.",
+        "portuguese": "WE HAVE NO SHIELDS, SIR.",
         "terminator": 255,
         "references": [
           "0x00CD2C"
@@ -278,7 +278,7 @@
         "offset_hex": "0x00CEC6",
         "offset": 52934,
         "english": "WE HAVE NO WEAPONS, SIR.",
-        "portuguese": "NuO DODECAEDRO ESTA BRILHANDO.",
+        "portuguese": "NAO TEMOS ARMAS, SENHOR.",
         "terminator": 255,
         "references": [
           "0x00CE48"
@@ -2789,7 +2789,7 @@
         "offset_hex": "0x02448D",
         "offset": 148621,
         "english": "WE ARE THE FRIGHTENINGLY AWESOME SPEMIN, MASTERS OF THE GALAXY, LORDS OF THE UNIVERSE, ALL-POWERFUL BEINGS FROM ANOTHER DIMENSION.  TREMBLE BEFORE US.  IDENTIFY YOURSELVES, SUBCREATURES.",
-        "portuguese": "SOMOS OS SPEMIN ASSUSTADORES, MESTRES DA GALAXIA, SENHORES DO UNIVERSO, SERES TODO-PODEROSOS DE OUTRA DIMENSAO.  TREME DIANTE DE NOS.  IDENTIFIQUEM-SE, SUBCRIATURAS.",
+        "portuguese": "SOMOS OS SPEMIN ASSUSTADORES, MESTRES DA GALAXIA, SENHORES DO UNIVERSO, SERES TODO-PODEROSOS DE OUTRA DIMENSAO.  TREMA DIANTE DE NOS.  IDENTIFIQUEM-SE, SUBCRIATURAS.",
         "terminator": 255,
         "references": [
           "0x0241CA"
@@ -6974,7 +6974,7 @@
         "offset_hex": "0x030382",
         "offset": 197506,
         "english": "01-01-4620  BON VOYAGEr   YOU ARE ABOUT TO EMBARK ON YOUR FIRST MISSION.  IN YOUR BANK ACCOUNT YOU WILL FIND THE AMOUNT OF 50,000 MONETARY UNITS (M.U.).  THIS MONEY IS TO BE SPENT TRAINING YOUR CREW, CONFIGURING YOUR SHIP, AND PURCHASING ANY NECESSARY MATERIALS.r   OF COURSE YOU MAY WISH TO LEAVE SOME PORTION OF THIS IN THE BANK.  AT THIS STAGE OF THE OPERATION OUR PRIMARY GOAL IS TO GATHER INFORMATION. CONSEQUENTLY, YOUR OBJECTIVES ARE -r   1. SEEK OUT AND EXPLORE STRANGEr      NEW WORLDSr   2. BOLDLY GO WHERE NO MAN HASr      GONE BEFOREr   3. ESTABLISH CONTACT WITH ANYr      SENTIENTSr   4. CAPTURE AND BRING BACKr      NON-SENTIENT LIFEFORMSr   5. RECORD ALIEN LIFEFORM DATAr   6. BRING BACK ALIEN ARTIFACTSr   7. BRING BACK ANY VALUABLEr      MINERALS (INCLUDING ENDURIUM)r   8. KEEP FROM GETTING BRUTALLYr      KILLEDr   WE HAVE LITTLE INFORMATION TO OFFER CONCERNING WHAT YOU MIGHT FIND.  WE SUGGEST, HOWEVER, THAT YOU AVOID THE AREA OF SPACE AROUND THE COORDINATES 135,84 SINCE THAT IS WHERE WE LOST CONTACT WITH TWO OF OUR EARLIER SHIPS.r   SCOUT REPORTS INDICATE A HIGH DENSITY OF MINERALS IN THE MOUNTAINOUS REGIONS OF THE INNERMOST PLANET OF OUR SYSTEM.r   FURTHER, WE HAVE FOUND INFORMATION THAT LEADS US TO BELIEVE THAT THERE MAY BE SOME RUINS OF THE OLD EMPIRE AT COORDINATES 17N X 162E ON THE SECOND PLANET OF THE NEIGHBORING K-CLASS SYSTEM.r   WE HAVE ALSO RECEIVED SOME INDICATION OF ALIEN ACTIVITY IN THE SYSTEM 175,94.  GOOD LUCK, AND A SAFE RETURN.r",
-        "portuguese": "01-01-4620 BOA VIAGEMr   VOCE ESTA PRESTES A EMBARCAR NA SUA PRIMEIRA MISSAO.  NA SUA CONTA BANCARIA VOCE ENCONTRARA O VALOR DE 50.000 UNIDADES MONETARIAS (M.U.).  ESTE DINHEIRO DEVE SER GASTO NO TREINAMENTO DE SUA TRIPULACAO, CONFIGURANDO SUA NAVE E COMPRANDO QUAISQUER MATERIAIS NECESSARIOS.r   E CLARO QUE VOCE PODE DESEJA DEIXAR ALGUMA PARTE DISSO NO BANCO.  NESTA FASE DA OPERACAO NOSSO OBJETIVO PRINCIPAL E COLETAR INFORMACOES. CONSEQUENTEMENTE, SEUS OBJETIVOS SAO -r   1. PROCURE E EXPLORE O ESTRANHOr      NOVOS MUNDOSr   2. VA AONDEMENTE ONDE NINGUEM TEMr      JA FOI ANTESr   3. ESTABELECA CONTATO COM QUALQUERr      SENTIENTESr   4. CAPTURAR E TRAZER DE VOLTAr      FORMAS DE VIDA NAO SENTIENTESr   5. REGISTRE DADOS DE FORMA DE VIDA ALIENIGENAr   6. TRAZER ARTEFATOS ALIENIGENASr   7. TRAGA DE VOLTA QUALQUER VALORr      MINERAIS (INCLUINDO ENDURIO)r   8. EVITE FICAR BRUTALMENTEr      MORTOr   TEMOS POUCA INFORMACAO A OFERECER SOBRE O QUE VOCE PODE ENCONTRAR.  SUGERIMOS, NO ENTANTO, QUE EVITE A AREA DO ESPACO EM TORNO DAS COORDENADAS 135,84, POIS FOI ONDE PERDEMOS CONTATO COM DUAS DE NOSSAS ANTERIORES NAVES.r   RELATORIOS SCOUT INDICAM UMA ALTA DENSIDADE DE MINERAIS NAS REGIOES MONTANHOSAS DO PLANETA MAIS INTERNO DO NOSSO SISTEMA.r   ALEM DISSO, ENCONTRAMOS INFORMACOES QUE NOS LEVAM A ACREDITAR QUE PODE HAVER ALGUMAS RUINAS DO ANTIGO IMPERIO NAS COORDENADAS 17N X 162E NO SEGUNDO PLANETA DO SISTEMA VIZINHO DE CLASSE K.r   TAMBEM RECEBEMOS ALGUMAS INDICACOES DE ATIVIDADE ALIENIGENA NO SISTEMA 175,94.  BOA SORTE E UM RETORNO SEGURO.r",
+        "portuguese": "01-01-4620 BON VOYAGEr   VOCE ESTA PRESTES A EMBARCAR NA SUA PRIMEIRA MISSAO.  NA SUA CONTA BANCARIA VOCE ENCONTRARA O VALOR DE 50.000 UNIDADES MONETARIAS (M.U.).  ESTE DINHEIRO DEVE SER GASTO NO TREINAMENTO DE SUA TRIPULACAO, CONFIGURANDO SUA NAVE E COMPRANDO QUAISQUER MATERIAIS NECESSARIOS.r   E CLARO QUE VOCE PODE DESEJA DEIXAR ALGUMA PARTE DISSO NO BANCO.  NESTA FASE DA OPERACAO NOSSO OBJETIVO PRINCIPAL E COLETAR INFORMACOES. CONSEQUENTEMENTE, SEUS OBJETIVOS SAO -r   1. PROCURE E EXPLORE NOVOSr      MUNDOS ESTRANHOSr   2. VA ONDE NINGUEM JA FOI ANTESr   3. ESTABELECA CONTATO COM QUALQUER SER SENTIENTEr   4. CAPTURAR E TRAZER DE VOLTAr      FORMAS DE VIDA NAO SENTIENTESr   5. REGISTRE DADOS DE FORMA DE VIDA ALIENIGENAr   6. TRAZER ARTEFATOS ALIENIGENASr   7. TRAGA DE VOLTA QUALQUER MINERALr      DE VALOR (INCLUINDO ENDURIO)r   8. EVITE FICAR BRUTALMENTEr      MORTOr   TEMOS POUCA INFORMACAO A OFERECER SOBRE O QUE VOCE PODE ENCONTRAR.  SUGERIMOS, NO ENTANTO, QUE EVITE A AREA DO ESPACO EM TORNO DAS COORDENADAS 135,84, POIS FOI ONDE PERDEMOS CONTATO COM DUAS DE NOSSAS ANTERIORES NAVES.r   RELATORIOS SCOUT INDICAM UMA ALTA DENSIDADE DE MINERAIS NAS REGIOES MONTANHOSAS DO PLANETA MAIS INTERNO DO NOSSO SISTEMA.r   ALEM DISSO, ENCONTRAMOS INFORMACOES QUE NOS LEVAM A ACREDITAR QUE PODE HAVER ALGUMAS RUINAS DO ANTIGO IMPERIO NAS COORDENADAS 17N X 162E NO SEGUNDO PLANETA DO SISTEMA VIZINHO DE CLASSE K.r   TAMBEM RECEBEMOS ALGUMAS INDICACOES DE ATIVIDADE ALIENIGENA NO SISTEMA 175,94.  BOA SORTE E UM RETORNO SEGURO.r",
         "terminator": 255,
         "references": [
           "0x030326"
@@ -12105,7 +12105,7 @@
           6
         ],
         "english": "A:CONFIRM ERASE    C:CANCEL",
-        "portuguese": "A:CONFIRMAR APAGAR C:CANCELAR",
+        "portuguese": "A:CONFIRM ERASE    C:CANCEL",
         "terminator": 255,
         "references": [
           "0x037CFC",
@@ -12146,7 +12146,7 @@
           6
         ],
         "english": "A:OVERWRITE            C:CANCEL",
-        "portuguese": "A: SUBSTITUIR C: CANCELAR",
+        "portuguese": "A: SUBSTITUIR C: CANCEL",
         "terminator": 255,
         "references": [],
         "type": "compact"
@@ -12198,7 +12198,7 @@
           6
         ],
         "english": "                       C:CANCEL",
-        "portuguese": "                       C:CANCELAR",
+        "portuguese": "                       C:CANCEL",
         "terminator": 255,
         "references": [],
         "type": "compact"
@@ -12665,7 +12665,7 @@
           4
         ],
         "english": "YOUR ACCOUNT BALANCE IS:",
-        "portuguese": "O SALDO DA SUA CONTA E:",
+        "portuguese": "SALDO DA SUA CONTA E:",
         "terminator": 255,
         "references": [],
         "type": "compact"
@@ -12717,7 +12717,7 @@
           6
         ],
         "english": "lr: MOVE    A: SELECT LETTER",
-        "portuguese": "lr: MOVER A: SELECIONAR LETRA",
+        "portuguese": "lr: MOVER A: SELEC. LETRA",
         "terminator": 255,
         "references": [],
         "type": "compact"
@@ -12731,7 +12731,7 @@
           6
         ],
         "english": "B : DONE    C: CANCEL",
-        "portuguese": "B: CONCLUIDO C: CANCELAR",
+        "portuguese": "B: OK C: CANCEL",
         "terminator": 255,
         "references": [],
         "type": "compact"
@@ -12783,7 +12783,7 @@
           134
         ],
         "english": "A: SELECT LETTER",
-        "portuguese": "A: SELECIONE A LETRA",
+        "portuguese": "A: SELECIONAR LETRA",
         "terminator": 255,
         "references": [],
         "type": "compact"
@@ -12797,7 +12797,7 @@
           6
         ],
         "english": "B: DONE           C:CANCEL",
-        "portuguese": "B: CONCLUIDO C: CANCELAR",
+        "portuguese": "B: DONE           C:CANCEL",
         "terminator": 255,
         "references": [],
         "type": "compact"
@@ -12819,7 +12819,7 @@
           6
         ],
         "english": "SELECT RACE:",
-        "portuguese": "SELECIONE A RACA:",
+        "portuguese": "SELEC. A RACA:",
         "terminator": 255,
         "references": [
           "0x014D20"
@@ -12905,7 +12905,7 @@
           6
         ],
         "english": "A: SELECT",
-        "portuguese": "R: SELECIONE",
+        "portuguese": "A: SELECIONE",
         "terminator": 255,
         "references": [],
         "type": "compact"
@@ -12919,7 +12919,7 @@
           6
         ],
         "english": "C: CANCEL",
-        "portuguese": "C: CANCELAR",
+        "portuguese": "C: CANCEL",
         "terminator": 255,
         "references": [],
         "type": "compact"
@@ -12979,7 +12979,7 @@
           2
         ],
         "english": "CHOOSE CREW ASSIGNMENTS:",
-        "portuguese": "ESCOLHA AS ATRIBUICOES DA TRIPULACAO:",
+        "portuguese": "ESCOLHA AS ATRIBUICOES:",
         "terminator": 255,
         "references": [
           "0x015280"
@@ -12995,7 +12995,7 @@
           6
         ],
         "english": "A: ASSIGN   B: DONE     C: CANCEL",
-        "portuguese": "A: ATRIBUIR B: CONCLUIDO C: CANCELAR",
+        "portuguese": "A: ATRIBUIR B: OK C: CANCEL",
         "terminator": 255,
         "references": [],
         "type": "compact"
@@ -13087,7 +13087,7 @@
           6
         ],
         "english": "A: TRAIN     B: DONE    C: CANCEL",
-        "portuguese": "A: TREM B: CONCLUIDO C: CANCELAR",
+        "portuguese": "A: TREINO B: OK C: CANCEL",
         "terminator": 255,
         "references": [
           "0x0154E8"
@@ -13184,7 +13184,7 @@
           4
         ],
         "english": "C:CANCEL",
-        "portuguese": "C:CANCELAR",
+        "portuguese": "C:CANCEL",
         "terminator": 255,
         "references": [],
         "type": "compact"
@@ -13222,7 +13222,7 @@
           4
         ],
         "english": "A:SELL  B:DONE",
-        "portuguese": "A: VENDA B: CONCLUIDO",
+        "portuguese": "A: VENDA B: OK",
         "terminator": 255,
         "references": [],
         "type": "compact"
@@ -13244,7 +13244,7 @@
           0
         ],
         "english": "SELECT ITEM TO BUY",
-        "portuguese": "SELECIONE O ITEM PARA COMPRAR",
+        "portuguese": "SELECIONE O ITEM",
         "terminator": 255,
         "references": [
           "0x0159A8"
@@ -13260,7 +13260,7 @@
           4
         ],
         "english": "A:BUY  B:DONE",
-        "portuguese": "A: COMPRAR B: CONCLUIDO",
+        "portuguese": "A: COMPRAR B: OK",
         "terminator": 255,
         "references": [],
         "type": "compact"
@@ -13362,7 +13362,7 @@
           14
         ],
         "english": "A:SELL   C:CANCEL",
-        "portuguese": "A: VENDER C: CANCELAR",
+        "portuguese": "A: VENDER C: CANCEL",
         "terminator": 255,
         "references": [
           "0x016546"
@@ -13449,7 +13449,7 @@
           16
         ],
         "english": "A: BUY    B:DONE",
-        "portuguese": "A: COMPRAR B: FEITO",
+        "portuguese": "A: COMPRAR B: OK",
         "terminator": 255,
         "references": [
           "0x01787C"
@@ -13497,7 +13497,7 @@
           6
         ],
         "english": "ENTER AMOUNT TO BUY:",
-        "portuguese": "DIGITE O VALOR A COMPRAR:",
+        "portuguese": "VALOR A COMPRAR:",
         "terminator": 255,
         "references": [
           "0x017500"
@@ -13521,7 +13521,7 @@
           6
         ],
         "english": "ENTER AMOUNT TO SELL:",
-        "portuguese": "DIGITE O VALOR A VENDER:",
+        "portuguese": "VALOR A VENDER:",
         "terminator": 255,
         "references": [
           "0x0175D2"
@@ -13545,7 +13545,7 @@
           44
         ],
         "english": "A:SELL",
-        "portuguese": "R: VENDER",
+        "portuguese": "A: VENDER",
         "terminator": 255,
         "references": [
           "0x017E56"
@@ -13561,7 +13561,7 @@
           44
         ],
         "english": "B:DONE",
-        "portuguese": "B: FEITO",
+        "portuguese": "B: OK",
         "terminator": 255,
         "references": [],
         "type": "compact"
@@ -13575,7 +13575,7 @@
           44
         ],
         "english": "C:CANCEL",
-        "portuguese": "C:CANCELAR",
+        "portuguese": "C:CANCEL",
         "terminator": 255,
         "references": [],
         "type": "compact"
@@ -13597,7 +13597,7 @@
           44
         ],
         "english": "A:BUY",
-        "portuguese": "R: COMPRAR",
+        "portuguese": "A: COMPRA",
         "terminator": 255,
         "references": [
           "0x017E82"
@@ -13613,7 +13613,7 @@
           44
         ],
         "english": "B:DONE",
-        "portuguese": "B: FEITO",
+        "portuguese": "B: OK",
         "terminator": 255,
         "references": [],
         "type": "compact"
@@ -13627,7 +13627,7 @@
           44
         ],
         "english": "C:CANCEL",
-        "portuguese": "C:CANCELAR",
+        "portuguese": "C:CANCEL",
         "terminator": 255,
         "references": [],
         "type": "compact"
@@ -13649,7 +13649,7 @@
           48
         ],
         "english": "A:BUY",
-        "portuguese": "R: COMPRAR",
+        "portuguese": "A: COMPRA",
         "terminator": 255,
         "references": [
           "0x017E74"
@@ -13665,7 +13665,7 @@
           48
         ],
         "english": "C:CANCEL",
-        "portuguese": "C:CANCELAR",
+        "portuguese": "C:CANCEL",
         "terminator": 255,
         "references": [],
         "type": "compact"
@@ -13687,7 +13687,7 @@
           100
         ],
         "english": "A:SELL",
-        "portuguese": "R: VENDER",
+        "portuguese": "A: VENDA",
         "terminator": 255,
         "references": [
           "0x017EDA"
@@ -13703,7 +13703,7 @@
           100
         ],
         "english": "B:DONE",
-        "portuguese": "B: FEITO",
+        "portuguese": "B: OK",
         "terminator": 255,
         "references": [],
         "type": "compact"
@@ -13717,7 +13717,7 @@
           100
         ],
         "english": "C:CANCEL",
-        "portuguese": "C:CANCELAR",
+        "portuguese": "C:CANCEL",
         "terminator": 255,
         "references": [],
         "type": "compact"
@@ -13739,7 +13739,7 @@
           100
         ],
         "english": "A:BUY",
-        "portuguese": "R: COMPRAR",
+        "portuguese": "A: COMPRA",
         "terminator": 255,
         "references": [
           "0x017EC0"
@@ -13755,7 +13755,7 @@
           100
         ],
         "english": "B:DONE",
-        "portuguese": "B: FEITO",
+        "portuguese": "B: OK",
         "terminator": 255,
         "references": [],
         "type": "compact"
@@ -13769,7 +13769,7 @@
           100
         ],
         "english": "C:CANCEL",
-        "portuguese": "C:CANCELAR",
+        "portuguese": "C:CANCEL",
         "terminator": 255,
         "references": [],
         "type": "compact"
@@ -13791,7 +13791,7 @@
           6
         ],
         "english": "REPAIR OPTIONS",
-        "portuguese": "OPCOES DE REPARO",
+        "portuguese": "OPCAO DE REPARO",
         "terminator": 255,
         "references": [
           "0x0148D0"
@@ -13821,7 +13821,7 @@
           8
         ],
         "english": "ENGINE:",
-        "portuguese": "MOTOR:",
+        "portuguese": "ENGINE:",
         "terminator": 255,
         "references": [],
         "type": "compact"
@@ -13905,7 +13905,7 @@
           6
         ],
         "english": "A: REPAIR",
-        "portuguese": "R: REPARO",
+        "portuguese": "A: REPARO",
         "terminator": 255,
         "references": [],
         "type": "compact"
@@ -13919,7 +13919,7 @@
           6
         ],
         "english": "B: DONE",
-        "portuguese": "B: FEITO",
+        "portuguese": "B: OK",
         "terminator": 255,
         "references": [],
         "type": "compact"
@@ -13933,7 +13933,7 @@
           6
         ],
         "english": "C: CANCEL",
-        "portuguese": "C: CANCELAR",
+        "portuguese": "C: CANCEL",
         "terminator": 255,
         "references": [],
         "type": "compact"
@@ -13999,7 +13999,7 @@
           150
         ],
         "english": "ENGINE:",
-        "portuguese": "MOTOR:",
+        "portuguese": "ENGINE:",
         "terminator": 255,
         "references": [],
         "type": "compact"
@@ -14069,7 +14069,7 @@
           20
         ],
         "english": "A: REPAIR",
-        "portuguese": "R: REPARO",
+        "portuguese": "A: REPARO",
         "terminator": 255,
         "references": [],
         "type": "compact"
@@ -14083,7 +14083,7 @@
           148
         ],
         "english": "B: DONE",
-        "portuguese": "B: FEITO",
+        "portuguese": "B: OK",
         "terminator": 255,
         "references": [],
         "type": "compact"
@@ -14157,7 +14157,7 @@
           140
         ],
         "english": "A: LEAVE ENCOUNTER",
-        "portuguese": "R: DEIXAR O ENCONTRO",
+        "portuguese": "A: DEIXAR ENCONTRO",
         "terminator": 255,
         "references": [
           "0x020114"
@@ -14249,7 +14249,7 @@
           132
         ],
         "english": "A:LAND            C:CANCEL",
-        "portuguese": "A:TERRA C:CANCELAR",
+        "portuguese": "A:LAND            C:CANCEL",
         "terminator": 255,
         "references": [],
         "type": "compact"
@@ -14433,7 +14433,7 @@
           2
         ],
         "english": "A:SELECT OPTION               C:EXIT",
-        "portuguese": "A:SELECIONE A OPCAO C:SAIR",
+        "portuguese": "A:SELECIONAR OPCAO C:SAIR",
         "terminator": 255,
         "references": [],
         "type": "compact"
@@ -14991,7 +14991,7 @@
           140
         ],
         "english": "A: DISTRESS",
-        "portuguese": "R: ANGUSTIA",
+        "portuguese": "A: DISTRESS",
         "terminator": 255,
         "references": [
           "0x01B04A",
@@ -15008,7 +15008,7 @@
           12
         ],
         "english": "C: CANCEL",
-        "portuguese": "C: CANCELAR",
+        "portuguese": "C: CANCEL",
         "terminator": 255,
         "references": [],
         "type": "compact"
@@ -15030,7 +15030,7 @@
           12
         ],
         "english": "A: DROP",
-        "portuguese": "R: QUEDA",
+        "portuguese": "A: DROP",
         "terminator": 255,
         "references": [
           "0x008A7A"
@@ -15046,7 +15046,7 @@
           140
         ],
         "english": "C: CANCEL",
-        "portuguese": "C: CANCELAR",
+        "portuguese": "C: CANCEL",
         "terminator": 255,
         "references": [],
         "type": "compact"
