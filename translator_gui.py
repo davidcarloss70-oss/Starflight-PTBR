@@ -46,19 +46,21 @@ def is_risky(english_text):
 
 
 def compute_locked_offsets(blocks):
-    """Itens sem referência própria (references == []) e a âncora que os
-    precede imediatamente - o compilador não aplica tradução nenhuma deles
-    (ver compile_rom), porque mexer nesse grupo corrompe gráficos de UI em
-    outras telas. Usado só pra sinalizar na interface, não bloqueia edição
-    de fato (o usuário pode editar, só não vai ter efeito na ROM)."""
+    """Itens de blocos PADRÃO onde pelo menos um item não tem referência
+    própria (references == []) - o compilador não aplica tradução em NENHUM
+    item desse bloco (ver compile_rom), porque mexer nesse grupo corrompe
+    gráficos de UI em outras telas. Usado só pra sinalizar na interface, não
+    bloqueia edição de fato (o usuário pode editar, só não vai ter efeito
+    na ROM). Blocos "compact" não entram aqui - eles têm seu próprio
+    mecanismo de referência por item (ver compile_rom)."""
     locked = set()
     for block in blocks:
+        if block.get("type", "standard") == "compact":
+            continue
         items = block["items"]
-        for i, item in enumerate(items):
-            if not item["references"]:
-                locked.add(item["offset"])
-                if i > 0 and items[i - 1]["references"]:
-                    locked.add(items[i - 1]["offset"])
+        if any(not it.get("references") for it in items):
+            for it in items:
+                locked.add(it["offset"])
     return locked
 
 
@@ -96,54 +98,86 @@ def compile_rom(log_callback):
     with open(JSON_PATH, "r", encoding="utf-8") as f:
         translation_blocks = json.load(f)
 
-    # Itens "sem referência própria" (references == []) só funcionam por
-    # estarem fisicamente colados, na ROM original, logo após um item com
-    # referência (a "âncora") - o jogo parece acessá-los por deslocamento
-    # fixo a partir da âncora, calculado com base no tamanho ORIGINAL em
-    # inglês. Realocar a âncora (ou mudar seu tamanho) corrompe essas linhas.
-    # Correção segura: não mexer em nada desse grupo (nem a âncora).
-    skip_offsets = set()
-    for block in translation_blocks:
-        items = block["items"]
-        for i, item in enumerate(items):
-            if not item["references"]:
-                skip_offsets.add(item["offset"])
-                if i > 0 and items[i - 1]["references"]:
-                    skip_offsets.add(items[i - 1]["offset"])
-
     current_write_offset = START_EXPANDED_OFFSET
     updated_pointers_count = 0
     total_strings_written = 0
     skipped_count = 0
 
     for block in translation_blocks:
-        for item in block["items"]:
-            if item["offset"] in skip_offsets:
-                skipped_count += 1
-                continue
+        block_type = block.get("type", "standard")
 
-            text_bytes = item["portuguese"].encode("latin1", errors="replace")
-            terminator_byte = item["terminator"]
+        if block_type == "compact":
+            # Bloco "compacto": cada linha = 2 bytes de controle + texto + 0xFF.
+            # Só o primeiro item do bloco tem referência própria (ponteiro
+            # direto pro cabeçalho de controle); o bloco inteiro é realocado
+            # de uma vez, preservando a ordem original das linhas.
+            block_new_start = current_write_offset
 
-            new_offset = current_write_offset
-            rom_data[new_offset:new_offset + len(text_bytes)] = text_bytes
-            rom_data[new_offset + len(text_bytes)] = terminator_byte
+            for item in block["items"]:
+                ctrl1, ctrl2 = item["ctrl_bytes"]
+                text_bytes = item["portuguese"].encode("latin1", errors="replace")
 
-            current_write_offset += len(text_bytes) + 1
+                rom_data[current_write_offset] = ctrl1
+                rom_data[current_write_offset + 1] = ctrl2
+                current_write_offset += 2
+
+                rom_data[current_write_offset:current_write_offset + len(text_bytes)] = text_bytes
+                current_write_offset += len(text_bytes)
+
+                rom_data[current_write_offset] = 0xFF
+                current_write_offset += 1
+
+                total_strings_written += 1
+
+                if item.get("references"):
+                    new_offset_bytes = block_new_start.to_bytes(4, "big")
+                    for ref_hex in item["references"]:
+                        ref_offset = int(ref_hex, 16)
+                        rom_data[ref_offset:ref_offset + 4] = new_offset_bytes
+                        updated_pointers_count += 1
+
+            rom_data[current_write_offset] = 0xFF
+            rom_data[current_write_offset + 1] = 0xFF
+            current_write_offset += 2
             if current_write_offset % 2 != 0:
                 rom_data[current_write_offset] = 0xFF
                 current_write_offset += 1
 
-            total_strings_written += 1
+        else:
+            # Bloco padrão. Se QUALQUER item do bloco não tiver referência
+            # própria, o bloco inteiro fica intocado - esses itens "órfãos"
+            # dependem de estar fisicamente adjacentes, na ROM original, a um
+            # item com referência (a "âncora"), acessados por deslocamento
+            # fixo calculado a partir do tamanho ORIGINAL em inglês. Mover
+            # qualquer parte do bloco corrompe gráficos de UI em outras telas.
+            has_unreferenced_orphans = any(not it.get("references") for it in block["items"])
 
-            new_offset_bytes = new_offset.to_bytes(4, "big")
-            for ref_hex in item["references"]:
-                ref_offset = int(ref_hex, 16)
-                rom_data[ref_offset:ref_offset + 4] = new_offset_bytes
-                updated_pointers_count += 1
+            if has_unreferenced_orphans:
+                skipped_count += len(block["items"])
+            else:
+                for item in block["items"]:
+                    text_bytes = item["portuguese"].encode("latin1", errors="replace")
+                    terminator_byte = item["terminator"]
+
+                    new_offset = current_write_offset
+                    rom_data[new_offset:new_offset + len(text_bytes)] = text_bytes
+                    rom_data[new_offset + len(text_bytes)] = terminator_byte
+
+                    current_write_offset += len(text_bytes) + 1
+                    if current_write_offset % 2 != 0:
+                        rom_data[current_write_offset] = 0xFF
+                        current_write_offset += 1
+
+                    total_strings_written += 1
+
+                    new_offset_bytes = new_offset.to_bytes(4, "big")
+                    for ref_hex in item["references"]:
+                        ref_offset = int(ref_hex, 16)
+                        rom_data[ref_offset:ref_offset + 4] = new_offset_bytes
+                        updated_pointers_count += 1
 
     log_callback(f"Strings gravadas: {total_strings_written}")
-    log_callback(f"Itens pulados (grupos sem referência própria, preservados intactos): {skipped_count}")
+    log_callback(f"Itens pulados (blocos com órfãos, preservados intactos): {skipped_count}")
     log_callback(f"Ponteiros atualizados: {updated_pointers_count}")
     log_callback(f"Dados escritos até 0x{current_write_offset:06X}")
 
@@ -158,11 +192,12 @@ def compile_rom(log_callback):
 
     # Neutraliza a rotina de checksum proprietária da EA (0x0FFFB0-0x0FFFFE),
     # que senão trava o jogo em tela preta com qualquer byte alterado na ROM.
+    # Confere os 2 bytes exatos e AVISA se não bater (não falha em silêncio).
     if rom_data[EA_CHECKSUM_BNE_OFFSET:EA_CHECKSUM_BNE_OFFSET + 2] == EA_CHECKSUM_BNE_BYTES:
         rom_data[EA_CHECKSUM_BNE_OFFSET:EA_CHECKSUM_BNE_OFFSET + 2] = EA_CHECKSUM_NOP_BYTES
         log_callback("Rotina de checksum da EA neutralizada (BNE -> NOP).")
     else:
-        log_callback("AVISO: padrão da rotina de checksum da EA não encontrado - pulei o patch!")
+        log_callback("AVISO: padrão da rotina de checksum da EA não encontrado - pulei o patch! A ROM provavelmente vai travar.")
 
     with open(ROM_OUTPUT, "wb") as f:
         f.write(rom_data)
